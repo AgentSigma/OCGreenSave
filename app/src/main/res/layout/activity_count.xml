@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.orangecoastcollege.cs273.tong.ocgs.CountActivity">
+
+    <TextView
+        android:id="@+id/enterAmountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:text="Please Enter Amount" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="55dp"
+        android:columnCount="3"
+        android:rowCount="6">
+
+        <TextView
+            android:id="@+id/pricedAmountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="5"
+            android:layout_marginTop="10dp"
+            android:text="$0.00" />
+
+        <EditText
+            android:id="@+id/PETPlasticEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_column="2"
+            android:layout_row="4"
+            android:layout_marginTop="30dp"
+            android:inputType="numberSigned" />
+
+        <EditText
+            android:id="@+id/HDPEPlasticEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_column="2"
+            android:layout_row="3"
+            android:layout_marginTop="30dp"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/bimetalEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_column="2"
+            android:layout_row="2"
+            android:layout_marginTop="30dp"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/glassEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_column="2"
+            android:layout_row="1"
+            android:layout_marginTop="30dp"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/aluminumPoundsEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_column="2"
+            android:layout_marginTop="30dp"
+            android:layout_row="0"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:id="@+id/totalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_marginTop="10dp"
+            android:layout_row="5"
+            android:text="Priced Total:" />
+
+        <TextView
+            android:id="@+id/plasticpetTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginTop="30dp"
+            android:layout_row="4"
+            android:text="(PET) Plastic Amount in Pounds:" />
+
+        <TextView
+            android:id="@+id/plasticHDPETextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginTop="30dp"
+            android:layout_row="3"
+            android:text="(HDPE) Plastic Amount in Pounds:" />
+
+        <TextView
+            android:id="@+id/bimetalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginTop="30dp"
+            android:layout_row="2"
+            android:text="Bi-metal in Amount in Pounds:" />
+
+        <TextView
+            android:id="@+id/glasspoundsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginTop="30dp"
+            android:layout_row="1"
+            android:text="Glass Amount in Pounds:" />
+
+        <TextView
+            android:id="@+id/aluminumpoundsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginTop="30dp"
+            android:layout_row="0"
+            android:text="Aluminum Amount in Pounds:" />
+
+        <ImageView
+            android:id="@+id/aluminumImageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:src="@drawable/aluminum" />
+
+        <ImageView
+            android:id="@+id/glassImageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:src="@drawable/glass" />
+
+        <ImageView
+            android:id="@+id/bimetalimageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:src="@drawable/penny" />
+
+        <ImageView
+            android:id="@+id/plastichdpeImageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_column="0"
+            android:layout_row="3"
+            android:src="@drawable/hdpeplastic" />
+
+        <ImageView
+            android:id="@+id/plasticPetImageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_column="0"
+            android:layout_row="4"
+            android:src="@drawable/petbottle" />
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/enterAmountTextView"
+        android:text="Aluminum $1.58/LB  |  Glass $0.104/ LB  |   Bi-Metal   $0.34 / LB  |  Plastic #1 (PET)  $1.23 /LB  |  Plastic #2 (HDPE) $0.56 / LB" />
+</RelativeLayout>

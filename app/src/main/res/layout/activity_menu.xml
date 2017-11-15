@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/recyclebackgroundimage"
+    tools:context="edu.orangecoastcollege.cs273.dreyna3.ocgreensave.LoginActivity">
+
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:background="?attr/colorPrimaryDark"
+        android:text="Welcome"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/recycleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/welcomeTextView"
+        android:layout_marginTop="39dp"
+        android:layout_toEndOf="@+id/logOutButton"
+        android:layout_toRightOf="@+id/logOutButton"
+        android:text="RECYCLE!"
+        android:textSize="30sp"
+        style="@style/Base.Widget.AppCompat.Button.Colored"/>
+
+    <Button
+        android:id="@+id/recycleCountButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/employeeOptionsButton"
+        android:layout_alignStart="@+id/employeeOptionsButton"
+        android:layout_below="@+id/employeeOptionsButton"
+        android:layout_marginTop="16dp"
+        android:text="View Personal Stats"
+        style="@style/Base.Widget.AppCompat.Button.Colored"/>
+
+    <Button
+        android:id="@+id/globalStatsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/logOutButton"
+        android:layout_alignLeft="@+id/recycleCountButton"
+        android:layout_alignStart="@+id/recycleCountButton"
+        android:layout_marginBottom="17dp"
+        android:text="View Global Statistics"
+        style="@style/Base.Widget.AppCompat.Button.Colored"/>
+
+    <Button
+        android:id="@+id/logOutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/globalStatsButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/globalStatsButton"
+        android:layout_marginBottom="18dp"
+        android:text="Log Out" />
+
+    <Button
+        android:id="@+id/adminOptionsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/recycleButton"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:text="Admin Options"
+        style="@style/Base.Widget.AppCompat.Button.Colored"/>
+
+    <Button
+        android:id="@+id/employeeOptionsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/adminOptionsButton"
+        android:layout_alignStart="@+id/adminOptionsButton"
+        android:layout_below="@+id/adminOptionsButton"
+        android:layout_marginTop="12dp"
+        android:text="Employee Options"
+        style="@style/Base.Widget.AppCompat.Button.Colored"/>
+</RelativeLayout>

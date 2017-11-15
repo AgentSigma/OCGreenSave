@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">OCGreenSave</string>
+    <string name="login_string">Welcome</string>
+    <string name="login_description">
+        Sign in to view your own personal stats and track your own contributions,
+        or create an account with a username and password you want</string>
+    <string name="login_username_hint">Username</string>
+    <string name="login_password_hint">Password</string>
+    <string name="login_buton_text">Sign In</string>
+    <string name="login_create_button">Create Profile</string>
+    <string name="log_activity_title">Log Your Efforts</string>
+    <string name="log_reset_button_text">Reset Counters</string>
+    <string name="log_take_pic_string">Log Your Receipt</string>
+    <string name="log_manually_create_log">Log using input</string>
+    <string name="log_save_exit_text">Save and Exit</string>
+    <string name="log_notice_text">
+        Note: We will reset your counters but add them to the statistics page!</string>
+    <string name="log_button_descriptions">Take a picture of your receipt, or enter in values manually</string>
+
+</resources>
