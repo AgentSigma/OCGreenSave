@@ -16,5 +16,9 @@
     <string name="log_notice_text">
         Note: We will reset your counters but add them to the statistics page!</string>
     <string name="log_button_descriptions">Take a picture of your receipt, or enter in values manually</string>
+    <string name="adminTextView">Admin Options</string>
+    <string name="editEmployees">Edit Employees</string>
+    <string name="editScheduleButton">Edit Employee Schedule</string>
+    <string name="logBaleButton">Log Bale</string>
 
 </resources>
