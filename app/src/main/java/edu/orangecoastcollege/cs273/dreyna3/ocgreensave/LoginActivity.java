@@ -13,7 +13,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
     }
 
-    public void toLogClick(View view) {
-        startActivity(new Intent(this, LogActivity.class));
+    public void toCreateAccount(View view) {
+        startActivity(new Intent(this, CreateProfileActivity.class));
     }
 }

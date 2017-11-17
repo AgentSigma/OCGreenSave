@@ -20,7 +20,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:onClick="toLogClick"/>
+        android:layout_marginTop="40dp"/>
 
     <TextView
         android:id="@+id/textView2"
@@ -32,7 +32,8 @@
         android:textColor="@color/colorPrimary"
         android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"/>
 
     <EditText
         android:id="@+id/editText"
@@ -53,7 +54,8 @@
         android:inputType="textPassword"
         android:layout_below="@+id/editText"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -77,6 +79,7 @@
             android:text="@string/login_create_button"
             android:layout_weight="1"
             android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"/>
+            android:layout_marginStart="10dp"
+            android:onClick="toCreateAccount"/>
     </LinearLayout>
 </RelativeLayout>

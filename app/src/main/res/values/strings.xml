@@ -20,5 +20,10 @@
     <string name="editEmployees">Edit Employees</string>
     <string name="editScheduleButton">Edit Employee Schedule</string>
     <string name="logBaleButton">Log Bale</string>
+    <string name="create_account_title">Create a Profile</string>
+    <string name="create_account_username_hint">Desired Username</string>
+    <string name="create_account_password_hint">Desired Password</string>
+    <string name="create_account_password_confirm_hint">Confirm Password</string>
+    <string name="create_account_button_text">Create Your Profile</string>
 
 </resources>
