@@ -25,5 +25,10 @@
     <string name="create_account_password_hint">Desired Password</string>
     <string name="create_account_password_confirm_hint">Confirm Password</string>
     <string name="create_account_button_text">Create Your Profile</string>
+    <string name="count_activity_title">Please Enter Amount (in pounds)</string>
+    <string name="menu_activity_recycle_button_text">Recycle!</string>
+    <string name="menu_activity_admin_button_text">Admin Options</string>
+    <string name="menu_activity_logout_button_text">Log Out</string>
+    <string name="admin_activity_mainmenu_button">Back to Main Menu</string>
 
 </resources>

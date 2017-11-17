@@ -4,35 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/recyclebackgroundimage"
-    tools:context="edu.orangecoastcollege.cs273.dreyna3.ocgreensave.LoginActivity">
+    tools:context="edu.orangecoastcollege.cs273.dreyna3.ocgreensave.MenuActivity"
+    android:padding="10dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/recycle_background_image"
+        android:alpha="0.8"/>
 
     <TextView
         android:id="@+id/welcomeTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
         android:background="?attr/colorPrimaryDark"
         android:text="Welcome"
         android:textColor="@android:color/holo_orange_dark"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:textAlignment="center"/>
 
     <Button
         android:id="@+id/recycleButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/welcomeTextView"
-        android:layout_marginTop="39dp"
+        android:layout_marginTop="30dp"
         android:layout_toEndOf="@+id/logOutButton"
         android:layout_toRightOf="@+id/logOutButton"
-        android:text="RECYCLE!"
+        android:text="@string/menu_activity_recycle_button_text"
         android:textSize="30sp"
-        style="@style/Base.Widget.AppCompat.Button.Colored"/>
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:onClick="toCountButtonClick"/>
 
     <Button
         android:id="@+id/recycleCountButton"
@@ -64,7 +68,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/globalStatsButton"
         android:layout_marginBottom="18dp"
-        android:text="Log Out" />
+        android:text="@string/menu_activity_logout_button_text"
+        android:onClick="logOutButtonClick"/>
 
     <Button
         android:id="@+id/adminOptionsButton"
@@ -76,8 +81,9 @@
         android:layout_marginLeft="25dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="25dp"
-        android:text="Admin Options"
-        style="@style/Base.Widget.AppCompat.Button.Colored"/>
+        android:text="@string/menu_activity_admin_button_text"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:onClick="toAdminButtonClick"/>
 
     <Button
         android:id="@+id/employeeOptionsButton"

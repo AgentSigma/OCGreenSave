@@ -11,9 +11,17 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+
     }
 
     public void toCreateAccount(View view) {
-        startActivity(new Intent(this, CreateProfileActivity.class));
+        Intent toCreateIntent = new Intent(this, CreateProfileActivity.class);
+        startActivity(toCreateIntent);
+    }
+
+    public void toMenuButtonClick(View view) {
+        Intent toMenuIntent = new Intent(this, MenuActivity.class);
+        startActivity(toMenuIntent);
     }
 }

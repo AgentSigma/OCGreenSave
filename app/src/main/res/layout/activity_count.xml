@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="edu.orangecoastcollege.cs273.tong.ocgs.CountActivity">
+    tools:context="edu.orangecoastcollege.cs273.dreyna3.ocgreensave.CountActivity"
+    android:padding="15dp">
 
     <TextView
         android:id="@+id/enterAmountTextView"
@@ -13,17 +14,13 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="12dp"
-        android:text="Please Enter Amount" />
+        android:text="@string/count_activity_title" />
 
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="55dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/textView9"
         android:columnCount="3"
         android:rowCount="6">
 
@@ -102,7 +99,7 @@
             android:layout_column="1"
             android:layout_marginTop="30dp"
             android:layout_row="4"
-            android:text="(PET) Plastic Amount in Pounds:" />
+            android:text="(PET) Plastic Amount: " />
 
         <TextView
             android:id="@+id/plasticHDPETextView"
@@ -111,7 +108,7 @@
             android:layout_column="1"
             android:layout_marginTop="30dp"
             android:layout_row="3"
-            android:text="(HDPE) Plastic Amount in Pounds:" />
+            android:text="(HDPE) Plastic Amount:" />
 
         <TextView
             android:id="@+id/bimetalTextView"
@@ -120,7 +117,7 @@
             android:layout_column="1"
             android:layout_marginTop="30dp"
             android:layout_row="2"
-            android:text="Bi-metal in Amount in Pounds:" />
+            android:text="Bi-metal in Amount:" />
 
         <TextView
             android:id="@+id/glasspoundsTextView"
@@ -129,7 +126,7 @@
             android:layout_column="1"
             android:layout_marginTop="30dp"
             android:layout_row="1"
-            android:text="Glass Amount in Pounds:" />
+            android:text="Glass Amount:" />
 
         <TextView
             android:id="@+id/aluminumpoundsTextView"
@@ -138,7 +135,7 @@
             android:layout_column="1"
             android:layout_marginTop="30dp"
             android:layout_row="0"
-            android:text="Aluminum Amount in Pounds:" />
+            android:text="Aluminum Amount:" />
 
         <ImageView
             android:id="@+id/aluminumImageView"

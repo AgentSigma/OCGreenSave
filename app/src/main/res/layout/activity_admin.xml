@@ -48,9 +48,9 @@
     <Button
         android:id="@+id/AdminOptionsbackButton"
         android:layout_width="match_parent"
-
         android:layout_height="wrap_content"
-        android:text="Main Menu" />
+        android:text="@string/admin_activity_mainmenu_button"
+        android:onClick="toMenuButtonClick"/>
 
 
 </LinearLayout>
