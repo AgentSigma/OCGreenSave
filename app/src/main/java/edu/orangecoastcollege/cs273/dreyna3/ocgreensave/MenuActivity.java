@@ -16,13 +16,11 @@ public class MenuActivity extends AppCompatActivity {
     public void toCountButtonClick(View view) {
         Intent toCounterIntent = new Intent(this, CountActivity.class);
         startActivity(toCounterIntent);
-        finish();
     }
 
     public void toAdminButtonClick(View view) {
         Intent toAdminIntent = new Intent(this, AdminActivity.class);
         startActivity(toAdminIntent);
-        finish();
     }
 
     public void logOutButtonClick(View view) {

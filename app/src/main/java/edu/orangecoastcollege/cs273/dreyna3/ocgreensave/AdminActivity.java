@@ -15,8 +15,9 @@ public class AdminActivity extends AppCompatActivity {
 
     public void toMenuButtonClick(View view) {
         Intent toMenuIntent = new Intent(this, MenuActivity.class);
+        toMenuIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(toMenuIntent);
-        // Disables user from going back into admin options view device's 'back' feature
+        // Disables user from going back into admin options via device's 'back' feature
         finish();
     }
 }

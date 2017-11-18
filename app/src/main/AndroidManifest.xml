@@ -21,12 +21,17 @@
         <activity
             android:name=".LogActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".CreateProfileActivity">
+        <activity android:name=".CreateProfileActivity"
+            android:screenOrientation="portrait">
         </activity>
         <activity android:name=".MenuActivity"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".AdminActivity">
+        <activity android:name=".AdminActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".CountActivity"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 
