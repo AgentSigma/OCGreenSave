@@ -7,28 +7,18 @@
     <string name="login_username_hint">Signature</string>
     <string name="login_password_hint">Admin Key</string>
     <string name="login_buton_text">Sign In</string>
-    <string name="login_create_button">Create Profile</string>
-    <string name="log_activity_title">Log Your Efforts</string>
-    <string name="log_reset_button_text">Reset Counters</string>
-    <string name="log_take_pic_string">Log Your Receipt</string>
-    <string name="log_manually_create_log">Log using input</string>
     <string name="log_save_exit_text">Save and Exit</string>
-    <string name="log_notice_text">
-        Note: We will reset your counters but add them to the statistics page!</string>
-    <string name="log_button_descriptions">Take a picture of your receipt, or enter in values manually</string>
     <string name="adminTextView">Admin Options</string>
-    <string name="editEmployees">Edit Employees</string>
+    <string name="editEmployees">Edit Schedules</string>
     <string name="editScheduleButton">Edit Employee Schedule</string>
     <string name="logBaleButton">Log Bale</string>
-    <string name="create_account_title">Create a Profile</string>
-    <string name="create_account_username_hint">Desired Username</string>
-    <string name="create_account_password_hint">Desired Password</string>
-    <string name="create_account_password_confirm_hint">Confirm Password</string>
-    <string name="create_account_button_text">Create Your Profile</string>
-    <string name="count_activity_title">Please Enter Amount (in pounds)</string>
-    <string name="menu_activity_recycle_button_text">Recycle!</string>
-    <string name="menu_activity_admin_button_text">Admin Options</string>
     <string name="menu_activity_logout_button_text">Log Out</string>
-    <string name="admin_activity_mainmenu_button">Back to Main Menu</string>
+    <string name="clear_bale_history">Clear Bale History</string>
+    <string name="mail_bale_history">Mail Bale History</string>
+    <string name="log_out_button_text">Log Out</string>
+    <string name="view_bale_history">View Bale History</string>
+    <string name="staff_menu_title">Staff Options</string>
+    <string name="view_schedule">View Your Schedule</string>
+    <string name="email_schedule">Email your schedule</string>
 
 </resources>

@@ -19,20 +19,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LogActivity"
-            android:screenOrientation="portrait" />
-        <activity android:name=".CreateProfileActivity"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity android:name=".MenuActivity"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity android:name=".AdminActivity"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity android:name=".CountActivity"
-            android:screenOrientation="portrait">
-        </activity>
+            android:name=".AdminActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".StaffActivity"></activity>
     </application>
 
 </manifest>

@@ -1,8 +1,7 @@
 package edu.orangecoastcollege.cs273.dreyna3.ocgreensave;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 public class AdminActivity extends AppCompatActivity {
@@ -13,11 +12,7 @@ public class AdminActivity extends AppCompatActivity {
         setContentView(R.layout.activity_admin);
     }
 
-    public void toMenuButtonClick(View view) {
-        Intent toMenuIntent = new Intent(this, MenuActivity.class);
-        toMenuIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(toMenuIntent);
-        // Disables user from going back into admin options via device's 'back' feature
+    public void logOutClick(View view) {
         finish();
     }
 }

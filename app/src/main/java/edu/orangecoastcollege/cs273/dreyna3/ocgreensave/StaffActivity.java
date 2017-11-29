@@ -3,11 +3,11 @@ package edu.orangecoastcollege.cs273.dreyna3.ocgreensave;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class LogActivity extends AppCompatActivity {
+public class StaffActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_log);
+        setContentView(R.layout.activity_staff);
     }
 }

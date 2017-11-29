@@ -7,6 +7,8 @@ import android.view.View;
 
 public class LoginActivity extends AppCompatActivity {
 
+    private static final int ADMIN_KEY = 1234;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,16 +17,7 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    public void toCreateAccount(View view) {
-        Intent toCreateIntent = new Intent(this, CreateProfileActivity.class);
-        startActivity(toCreateIntent);
-    }
-
-    public void toMenuButtonClick(View view) {
-        Intent toMenuIntent = new Intent(this, MenuActivity.class);
-
-        // Check against admin key if one is entered, otherwise just login with a name
-
-        startActivity(toMenuIntent);
+    public void signInClick(View view) {
+        startActivity(new Intent(this, AdminActivity.class));
     }
 }
