@@ -1,86 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="edu.orangecoastcollege.cs273.dreyna3.ocgreensave.LoginActivity"
-    android:padding="15dp">
+    android:padding="15dp"
+    tools:context="edu.orangecoastcollege.cs273.dreyna3.ocgreensave.LoginActivity">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
         android:text="@string/login_string"
         android:textAlignment="center"
-        android:textSize="40sp"
         android:textColor="@color/colorPrimaryDark"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="40dp"/>
+        android:textSize="40sp"
+        android:layout_alignParentTop="true"/>
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="16dp"
         android:text="@string/login_description"
         android:textAlignment="center"
-        android:textSize="16sp"
         android:textColor="@color/colorPrimary"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="10dp"/>
+        android:textSize="16sp" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/signatureEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
         android:hint="@string/login_username_hint"
         android:inputType="text"
-        android:textColor="@color/black"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
+        android:textColor="@color/black" />
 
     <EditText
+        android:id="@+id/keyEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/signatureEditText"
         android:hint="@string/login_password_hint"
-        android:textColor="@color/black"
-        android:inputType="textPassword"
-        android:layout_below="@+id/editText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="10dp"/>
+        android:inputType="numberPassword" />
 
-    <LinearLayout
+    <Button
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/linearLayout">
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/login_buton_text"
-            android:layout_weight="2"
-            android:layout_marginRight="10dp"
-            android:layout_marginEnd="10dp"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:onClick="toMenuButtonClick"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/login_create_button"
-            android:layout_weight="1"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
-            android:onClick="toCreateAccount"/>
-    </LinearLayout>
+        android:onClick="toMenuButtonClick"
+        android:text="@string/login_buton_text" />
 </RelativeLayout>

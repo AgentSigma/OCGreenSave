@@ -22,6 +22,9 @@ public class LoginActivity extends AppCompatActivity {
 
     public void toMenuButtonClick(View view) {
         Intent toMenuIntent = new Intent(this, MenuActivity.class);
+
+        // Check against admin key if one is entered, otherwise just login with a name
+
         startActivity(toMenuIntent);
     }
 }
