@@ -9,7 +9,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/AdminOptionsTextView"
+        android:id="@+id/adminOptionsTextView"
         android:layout_width="match_parent"
         android:textAlignment="center"
         android:layout_height="wrap_content"
@@ -17,17 +17,18 @@
         android:textSize="50sp" />
 
     <Button
-        android:id="@+id/AdminOptionsLogBaleButton"
+        android:id="@+id/adminLogBaleButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:textSize="40sp"
         style="@style/Base.Widget.AppCompat.Button.Colored"
         android:text="@string/logBaleButton"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"
+        android:onClick="adminLogBaleClick"/>
 
     <Button
-        android:id="@+id/AdminOptionsEditEmployeesButton"
+        android:id="@+id/adminEditSchedulesButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/Base.Widget.AppCompat.Button.Colored"
@@ -41,7 +42,8 @@
         android:textSize="40sp"
         style="@style/Base.Widget.AppCompat.Button.Colored"
         android:text="@string/mail_bale_history"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:id="@+id/adminMailHistoryButton"/>
 
     <Button
         android:layout_width="match_parent"
@@ -49,24 +51,26 @@
         android:text="@string/view_bale_history"
         android:textSize="40sp"
         style="@style/Base.Widget.AppCompat.Button.Colored"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:id="@+id/adminViewHistoryButton"/>
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_height="wrap_content"
         android:layout_weight="0"
         android:text="@string/clear_bale_history"
         android:textSize="24sp"
         android:textColor="@color/red"
-        android:fontFamily="sans-serif-condensed"/>
+        android:fontFamily="sans-serif-smallcaps"/>
 
     <Button
-        android:id="@+id/AdminOptionsbackButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/adminLogOutButton"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
         android:text="@string/log_out_button_text"
         android:layout_gravity="center"
-        android:onClick="logOutClick"
+        android:onClick="adminLogOutClick"
         android:textSize="20sp"
         android:layout_marginTop="30dp"/>
 

@@ -7,7 +7,7 @@
     <string name="login_username_hint">Signature</string>
     <string name="login_password_hint">Admin Key</string>
     <string name="login_buton_text">Sign In</string>
-    <string name="log_save_exit_text">Save and Exit</string>
+    <string name="log_save_exit_text">Add Bale To Database</string>
     <string name="adminTextView">Admin Options</string>
     <string name="editEmployees">Edit Schedules</string>
     <string name="editScheduleButton">Edit Employee Schedule</string>
@@ -20,5 +20,11 @@
     <string name="staff_menu_title">Staff Options</string>
     <string name="view_schedule">View Your Schedule</string>
     <string name="email_schedule">Email your schedule</string>
+    <string name="empty_login">Please enter a signature, or signature with admin key</string>
+    <string name="incorrect_admin_key">Incorrect admin key.</string>
+    <string name="log_bale_type">Bale Type</string>
+    <string name="log_bale_date">Date of This Bale</string>
+    <string name="log_bale_weight">Bale Weight</string>
+    <string name="log_bale">Log a Bale</string>
 
 </resources>

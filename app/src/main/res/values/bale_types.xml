@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="bale_types">
+        <item>Aluminum/Cans</item>
+        <item>PET #1</item>
+        <item>Cardboard</item>
+    </string-array>
+</resources>
