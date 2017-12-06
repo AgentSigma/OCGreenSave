@@ -47,7 +47,6 @@ public class LogBaleActivity extends AppCompatActivity implements AdapterView.On
         Intent fromMenuIntent = getIntent();
         currentUser = fromMenuIntent.getStringExtra("username");
         mBale.setUser(currentUser);
-
     }
 
     @Override

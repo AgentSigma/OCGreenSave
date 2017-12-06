@@ -8,12 +8,14 @@ import android.view.View;
 public class StaffActivity extends AppCompatActivity {
 
     private String currentUser;
+    private boolean isAdmin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_staff);
 
+        isAdmin = false;
         currentUser = getIntent().getStringExtra("username");
     }
 

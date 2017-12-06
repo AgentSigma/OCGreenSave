@@ -3,7 +3,7 @@
     <string name="login_string">Welcome</string>
     <string name="login_description">
         Please enter your name to be able to log a bale, or check your schedule.
-        Admins may enter a key to edit schedules, view all bales, and other administrative functions.</string>
+        \nAdmins must enter a key to access administrative functions.</string>
     <string name="login_username_hint">Signature</string>
     <string name="login_password_hint">Admin Key</string>
     <string name="login_buton_text">Sign In</string>

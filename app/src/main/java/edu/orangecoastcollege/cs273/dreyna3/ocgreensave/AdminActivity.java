@@ -7,12 +7,14 @@ import android.view.View;
 
 public class AdminActivity extends AppCompatActivity {
 
+    private boolean isAdmin;
     private String currentUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin);
 
+        isAdmin = true;
         currentUser = getIntent().getStringExtra("username");
     }
 

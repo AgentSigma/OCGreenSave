@@ -5,13 +5,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="15dp"
-    tools:context="edu.orangecoastcollege.cs273.dreyna3.ocgreensave.LoginActivity">
+    tools:context="edu.orangecoastcollege.cs273.dreyna3.ocgreensave.LoginActivity"
+    android:id="@+id/signInLayout">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="41dp"
+        android:layout_marginTop="40dp"
         android:text="@string/login_string"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
@@ -23,11 +24,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:text="@string/login_description"
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
-        android:textSize="16sp" />
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/signatureEditText"
@@ -53,5 +54,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:onClick="signInClick"
+        android:id="@+id/signInButton"
         android:text="@string/login_buton_text" />
 </RelativeLayout>
