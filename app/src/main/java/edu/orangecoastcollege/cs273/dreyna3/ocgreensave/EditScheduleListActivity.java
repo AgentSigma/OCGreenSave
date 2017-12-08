@@ -1,7 +1,6 @@
 package edu.orangecoastcollege.cs273.dreyna3.ocgreensave;
 
 import android.content.Intent;
-import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,7 +9,7 @@ import android.widget.ListView;
 
 import java.util.List;
 
-public class ViewAllSchedulesActivity extends AppCompatActivity {
+public class EditScheduleListActivity extends AppCompatActivity {
 
     private ListView mSchedulesListView;
     private List<Employee> mScheduleList;
@@ -20,9 +19,9 @@ public class ViewAllSchedulesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_all_schedules);
+        setContentView(R.layout.activity_edit_schedule_list);
 
-        mSchedulesListView = (ListView) findViewById(R.id.viewAllSchedulesListView);
+        mSchedulesListView = (ListView) findViewById(R.id.editSchedulesListView);
         mDb = new DBHelper(this);
         mScheduleList = mDb.getAllEmployees();
         mScheduleListAdapter = new ScheduleListAdapter(this, R.layout.schedule_list_item, mScheduleList);
@@ -31,15 +30,16 @@ public class ViewAllSchedulesActivity extends AppCompatActivity {
     }
 
     /**
-     * This will send the user to the emailScheduleActivity
-     * Only happens in the ViewAllSchedulesActivity
+     * This will start a new activity to edit the selected employee schedule
+     * Only happens in the EditScheduleListActivity
      * @param view the selected item
      */
     public void scheduleClicked(View view){
         LinearLayout selected = (LinearLayout) view;
         Employee employee = (Employee) selected.getTag();
-        Intent toMailScheduleIntent = new Intent(this, MailScheduleActivity.class);
+        Intent toMailScheduleIntent = new Intent(this, EditEmployeeScheduleActivity.class);
         toMailScheduleIntent.putExtra("selectedSchedule", employee);
         startActivity(toMailScheduleIntent);
+        finish();
     }
 }

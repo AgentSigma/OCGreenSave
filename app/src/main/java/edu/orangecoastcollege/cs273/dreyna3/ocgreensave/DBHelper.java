@@ -86,6 +86,11 @@ public class DBHelper extends SQLiteOpenHelper {
         db.delete(EMPLOYEE_TABLE, null, null);
     }
 
+    public void deleteBaleHistory(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(BALE_TABLE, null, null);
+    }
+
     public void addBale(Bale bale){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -114,6 +119,32 @@ public class DBHelper extends SQLiteOpenHelper {
         values.put(FIELD_SUNDAY, employee.getSundayHours());
 
         db.insert(EMPLOYEE_TABLE, null, values);
+        db.close();
+    }
+
+    public void deleteEmployee(Employee employee){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(EMPLOYEE_TABLE, EMPLOYEE_KEY_FIELD_ID + " = ?",
+                new String[]{String.valueOf(employee.getId())});
+        db.close();
+    }
+
+    public void updateEmployee(Employee employee){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+
+        values.put(FIELD_NAME, employee.getName());
+        values.put(FIELD_WEEKSTARTDAY, employee.getWeekDate());
+        values.put(FIELD_MONDAY, employee.getMondayHours());
+        values.put(FIELD_TUESDAY, employee.getTuesdayHours());
+        values.put(FIELD_WEDNESDAY, employee.getWednesdayHours());
+        values.put(FIELD_THURSDAY, employee.getThursdayHours());
+        values.put(FIELD_FRIDAY, employee.getFridayHours());
+        values.put(FIELD_SATURDAY, employee.getSaturdayHours());
+        values.put(FIELD_SUNDAY, employee.getSundayHours());
+
+        db.update(EMPLOYEE_TABLE, values, EMPLOYEE_KEY_FIELD_ID + " = ?",
+                new String[]{String.valueOf(employee.getId())});
         db.close();
     }
 

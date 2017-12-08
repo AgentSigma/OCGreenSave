@@ -8,14 +8,12 @@ import android.view.View;
 public class StaffActivity extends AppCompatActivity {
 
     private String currentUser;
-    private boolean isAdmin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_staff);
 
-        isAdmin = false;
         currentUser = getIntent().getStringExtra("username");
     }
 
@@ -27,5 +25,10 @@ public class StaffActivity extends AppCompatActivity {
 
     public void staffLogOutClick(View view) {
         finish();
+    }
+
+    public void toViewAllSchedulesClick(View view) {
+        Intent toViewAllSchedulesIntent = new Intent(this, ViewAllSchedulesActivity.class);
+        startActivity(toViewAllSchedulesIntent);
     }
 }

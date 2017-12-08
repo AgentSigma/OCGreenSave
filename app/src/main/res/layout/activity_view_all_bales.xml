@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context="edu.orangecoastcollege.cs273.dreyna3.ocgreensave.ViewAllBalesActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/ViewALLBalesTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:text="@string/BaleHistoryText"
+        android:textColor="@color/black"
+        android:background="@color/lightGreen"
+        android:textSize="50sp" />
+
+    <ListView
+        android:id="@+id/viewAllBalesListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

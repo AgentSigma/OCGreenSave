@@ -1,45 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    tools:context="edu.orangecoastcollege.cs273.dreyna3.ocgreensave.DeleteSchedulesActivity"
     android:orientation="vertical"
-    android:id="@+id/scheduleItemLayout"
-    android:onClick="scheduleClicked">
-    <LinearLayout
+    android:padding="15dp">
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="2dp"
-        android:layout_marginTop="10dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Employee Name"
-            android:background="@color/colorPrimaryDark"
-            android:textSize="26sp"
-            android:textColor="@color/lightGreen"
-            android:id="@+id/scheduleItemName"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Week Date"
-            android:textAlignment="center"
-            android:textSize="26sp"
-            android:textColor="@color/black"
-            android:background="@color/colorPrimary"
-            android:id="@+id/scheduleItemWeekDate"/>
-    </LinearLayout>
+        android:textSize="40sp"
+        android:textColor="@color/red"
+        android:text="@string/delete_schedule_activity_title"
+        android:textAlignment="center"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/lightGreen"
-        android:layout_marginBottom="10dp"
-        >
+        android:layout_height="wrap_content">
 
         <TextView
             android:layout_width="wrap_content"
@@ -49,7 +29,7 @@
             android:textColor="@color/black"
             android:background="@color/colorPrimary"
             android:text="Monday Hours"
-            android:id="@+id/scheduleItemMondayHours"/>
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -58,7 +38,7 @@
             android:textColor="@color/black"
             android:text="Tuesday Hours"
             android:background="@color/lightGreen"
-            android:id="@+id/scheduleItemTuesdayHours"/>
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -67,7 +47,7 @@
             android:textColor="@color/black"
             android:background="@color/colorPrimary"
             android:text="Wednesday Hours"
-            android:id="@+id/scheduleItemWednesdayHours"/>
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -76,7 +56,7 @@
             android:textColor="@color/black"
             android:background="@color/lightGreen"
             android:text="Thursday Hours"
-            android:id="@+id/scheduleItemThursdayHours"/>
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -85,7 +65,7 @@
             android:textColor="@color/black"
             android:text="Friday Hours"
             android:background="@color/colorPrimary"
-            android:id="@+id/scheduleItemFridayHours"/>
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -94,7 +74,7 @@
             android:textColor="@color/black"
             android:text="Saturday Hours"
             android:background="@color/lightGreen"
-            android:id="@+id/scheduleItemSaturdayHours"/>
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -103,8 +83,13 @@
             android:textColor="@color/black"
             android:text="Sunday Hours"
             android:background="@color/colorPrimary"
-            android:id="@+id/scheduleItemSundayHours"/>
+            />
 
     </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/deleteSchedulesListView"/>
 
 </LinearLayout>

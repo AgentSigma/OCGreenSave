@@ -26,6 +26,18 @@
         </activity>
         <activity android:name=".AddScheduleActivity">
         </activity>
+        <activity android:name=".MailScheduleActivity">
+        </activity>
+        <activity android:name=".DeleteSchedulesActivity">
+        </activity>
+        <activity android:name=".EditScheduleListActivity">
+        </activity>
+        <activity android:name=".EditEmployeeScheduleActivity">
+        </activity>
+        <activity android:name=".ViewAllBalesActivity">
+        </activity>
+        <activity android:name=".MailBaleActivity">
+        </activity>
     </application>
 
 </manifest>

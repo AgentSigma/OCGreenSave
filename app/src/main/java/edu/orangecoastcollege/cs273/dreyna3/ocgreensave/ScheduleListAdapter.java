@@ -70,6 +70,7 @@ public class ScheduleListAdapter extends ArrayAdapter<Employee>{
         mSaturday.setText(employee.getSaturdayHours());
         mSunday.setText(employee.getSundayHours());
 
+        mLinearLayout.setTag(employee);
         return view;
     }
 }

@@ -1,10 +1,13 @@
 package edu.orangecoastcollege.cs273.dreyna3.ocgreensave;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * Created by Daniel on 12/1/2017.
  */
 
-public class Employee {
+public class Employee implements Parcelable {
     private int id;
     private String name;
     private String weekDate;
@@ -44,6 +47,31 @@ public class Employee {
         this.saturdayHours = saturdayHours;
         this.sundayHours = sundayHours;
     }
+
+    protected Employee(Parcel in) {
+        id = in.readInt();
+        name = in.readString();
+        weekDate = in.readString();
+        mondayHours = in.readString();
+        tuesdayHours = in.readString();
+        wednesdayHours = in.readString();
+        thursdayHours = in.readString();
+        fridayHours = in.readString();
+        saturdayHours = in.readString();
+        sundayHours = in.readString();
+    }
+
+    public static final Creator<Employee> CREATOR = new Creator<Employee>() {
+        @Override
+        public Employee createFromParcel(Parcel in) {
+            return new Employee(in);
+        }
+
+        @Override
+        public Employee[] newArray(int size) {
+            return new Employee[size];
+        }
+    };
 
     public int getId() {
         return id;
@@ -119,5 +147,24 @@ public class Employee {
 
     public void setSundayHours(String sundayHours) {
         this.sundayHours = sundayHours;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeInt(id);
+        parcel.writeString(name);
+        parcel.writeString(weekDate);
+        parcel.writeString(mondayHours);
+        parcel.writeString(tuesdayHours);
+        parcel.writeString(wednesdayHours);
+        parcel.writeString(thursdayHours);
+        parcel.writeString(fridayHours);
+        parcel.writeString(saturdayHours);
+        parcel.writeString(sundayHours);
     }
 }

@@ -25,7 +25,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         DBHelper db = new DBHelper(this);
-        db.clearDatabases();
+        //db.clearDatabases();
 
         mUsernameEditText = (EditText) findViewById(R.id.signatureEditText);
         mKeyEditText = (EditText) findViewById(R.id.keyEditText);

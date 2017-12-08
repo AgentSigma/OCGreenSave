@@ -24,7 +24,8 @@ public class EditSchedulesActivity extends AppCompatActivity {
     }
 
     public void toEditSchedulesClick(View view) {
-        Intent toEditSchedulesIntent = new Intent(this, null);
+        Intent toEditSchedulesIntent = new Intent(this, EditScheduleListActivity.class);
+        startActivity(toEditSchedulesIntent);
     }
 
     public void toAddScheduleClick(View view) {
@@ -33,6 +34,7 @@ public class EditSchedulesActivity extends AppCompatActivity {
     }
 
     public void toDeleteSchedulesClick(View view) {
-        Intent toDeleteScheduleClick = new Intent(this, null);
+        Intent toDeleteScheduleIntent = new Intent(this, DeleteSchedulesActivity.class);
+        startActivity(toDeleteScheduleIntent);
     }
 }

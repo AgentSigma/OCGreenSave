@@ -13,12 +13,12 @@
     <string name="editScheduleButton">Edit Employee Schedule</string>
     <string name="logBaleButton">Log Bale</string>
     <string name="menu_activity_logout_button_text">Log Out</string>
-    <string name="clear_bale_history">Clear Bale History</string>
+    <string name="clear_bale_history">Delete Bale History</string>
     <string name="mail_bale_history">Mail Bale History</string>
     <string name="log_out_button_text">Log Out</string>
     <string name="view_bale_history">View Bale History</string>
     <string name="staff_menu_title">Staff Options</string>
-    <string name="view_schedule">View Your Schedule</string>
+    <string name="view_schedule">View Staff Schedule List</string>
     <string name="email_schedule">Email your schedule</string>
     <string name="empty_login">Please enter a signature, or signature with admin key</string>
     <string name="incorrect_admin_key">Incorrect admin key.</string>
@@ -47,5 +47,18 @@
     <string name="add_schedule_sunday_text">Sunday</string>
     <string name="add_schedule_buton_text">Add Employee Schedule</string>
     <string name="added_schedule_text">Added employee to the schedule list.</string>
+    <string name="subject_text">Subject</string>
+    <string name="enter_email">Enter Email (Recipient)</string>
+    <string name="send_email">Send Email</string>
+    <string name="send_email_body_note">Email body will be auto \nfilled with bale database</string>
+    <string name="BaleHistoryText">Bale Database</string>
+    <string name="send_email_body_schedule_note">Body will auto populate with your\nschedule that you selected</string>
+    <string name="delete_bales_warning">This is a dangerous function. Double tap again if this is what you wish.</string>
+    <string name="delete_schedule_activity_title">Tap to Delete A Schedule</string>
+    <string name="edit_schedule_list_title">Tap To Edit A Schedule</string>
+    <string name="edit_employee_schedule_title">Edit Schedule</string>
+    <string name="edit_schedule_buton_text">Save Changes To This Employee</string>
+    <string name="editted_schedule_text">Editted schedule successfully!</string>
+    <string name="deleted_bale_history_notification">Deleted bale history</string>
 
 </resources>
