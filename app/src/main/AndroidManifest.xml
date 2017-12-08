@@ -9,18 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".LoginActivity">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity
-            android:name=".AdminActivity"/>
+        <activity android:name=".AdminActivity"/>
         <activity android:name=".StaffActivity"/>
         <activity android:name=".LogBaleActivity">
+        </activity>
+        <activity android:name=".EditSchedulesActivity">
+        </activity>
+        <activity android:name=".ViewAllSchedulesActivity">
+        </activity>
+        <activity android:name=".AddScheduleActivity">
         </activity>
     </application>
 

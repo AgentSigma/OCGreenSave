@@ -34,7 +34,8 @@
         style="@style/Base.Widget.AppCompat.Button.Colored"
         android:textSize="40sp"
         android:layout_weight="1"
-        android:text="@string/editEmployees" />
+        android:text="@string/editEmployees"
+        android:onClick="toEditScheduleMenuClick"/>
 
     <Button
         android:layout_width="match_parent"

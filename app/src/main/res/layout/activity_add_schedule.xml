@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.orangecoastcollege.cs273.dreyna3.ocgreensave.AddScheduleActivity"
+    android:orientation="vertical"
+    android:padding="15dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:textColor="@color/black"
+        android:text="@string/add_schedule_title"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+
+        android:textSize="30sp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/add_schedule_name_text"
+        android:inputType="textPersonName"
+        android:id="@+id/addScheduleNameEditText"/>
+    <requestFocus/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/add_schedule_weekdate_text"
+        android:id="@+id/addScheduleWeekDateEditText"
+        android:inputType="text"
+        tools:ignore="TextFields"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:text="@string/hours_text"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:background="@color/lightGreen"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/add_schedule_monday_text"
+            android:textSize="30sp"
+            android:id="@+id/addScheduleMondayEditText"
+            android:inputType="text"
+            android:layout_weight="1"
+            android:textAlignment="center"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/add_schedule_tuesday_text"
+            android:textSize="30sp"
+            android:id="@+id/addScheduleTuesdayEditText"
+            android:inputType="text"
+            android:layout_weight="1"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/add_schedule_wednesday_text"
+            android:textSize="30sp"
+            android:id="@+id/addScheduleWednesdayEditText"
+            android:inputType="text"
+            android:layout_weight="1"
+            android:textAlignment="center"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/add_schedule_thursday_text"
+            android:textSize="30sp"
+            android:id="@+id/addScheduleThursdayEditText"
+            android:inputType="text"
+            android:layout_weight="1"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/add_schedule_friday_text"
+            android:textSize="30sp"
+            android:id="@+id/addScheduleFridayEditText"
+            android:inputType="text"
+            android:layout_weight="1"
+            android:textAlignment="center"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/add_schedule_saturday_text"
+            android:textSize="30sp"
+            android:id="@+id/addScheduleSaturdayEditText"
+            android:inputType="text"
+            android:layout_weight="1"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/add_schedule_sunday_text"
+        android:textSize="30sp"
+        android:id="@+id/addScheduleSundayEditText"
+        android:layout_gravity="center"
+        android:inputType="text"
+        android:textAlignment="center"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:text="@string/add_schedule_buton_text"
+        android:onClick="addScheduleClick"
+        android:textSize="26sp"
+        android:textColor="@color/black"/>
+
+
+</LinearLayout>

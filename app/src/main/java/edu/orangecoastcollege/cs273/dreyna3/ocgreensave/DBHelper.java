@@ -16,7 +16,7 @@ import java.util.List;
 public class DBHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "OCGsStaff";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 3;
 
     // For Bale Tracking
     private static final String BALE_TABLE = "BaleHistory";
@@ -154,7 +154,7 @@ public class DBHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
 
         Cursor c = db.query(
-                BALE_TABLE,
+                EMPLOYEE_TABLE,
                 new String[]{
                         BALE_KEY_FIELD_ID,
                         FIELD_NAME,

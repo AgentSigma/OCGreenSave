@@ -26,5 +26,26 @@
     <string name="log_bale_date">Date of This Bale</string>
     <string name="log_bale_weight">Bale Weight</string>
     <string name="log_bale">Log a Bale</string>
+    <string name="edit_schedules_title">Edit Schedules</string>
+    <string name="edit_schedule_view_all_schedules">View All Schedules</string>
+    <string name="edit_schedules_edit_button_text">Edit Staff Schedules</string>
+    <string name="edit_schedules_clear_button_text">Clear All Schedules</string>
+    <string name="edit_schedules_add_button_text">Add A Schedule</string>
+    <string name="edit_schedule_delete_button_text">Delete Schedule</string>
+    <string name="edit_schedule_back_button">Back To Admin Menu</string>
+    <string name="view_all_schedules_title">Viewing all Staff Schedules</string>
+    <string name="add_schedule_title">Add Schedules</string>
+    <string name="add_schedule_name_text">Employee Name</string>
+    <string name="add_schedule_weekdate_text">Week Starting Date - Ending Date</string>
+    <string name="hours_text">Hours</string>
+    <string name="add_schedule_monday_text">Monday</string>
+    <string name="add_schedule_tuesday_text">Tuesday</string>
+    <string name="add_schedule_wednesday_text">Wednesday</string>
+    <string name="add_schedule_thursday_text">Thursday</string>
+    <string name="add_schedule_friday_text">Friday</string>
+    <string name="add_schedule_saturday_text">Saturday</string>
+    <string name="add_schedule_sunday_text">Sunday</string>
+    <string name="add_schedule_buton_text">Add Employee Schedule</string>
+    <string name="added_schedule_text">Added employee to the schedule list.</string>
 
 </resources>

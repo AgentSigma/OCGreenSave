@@ -27,4 +27,9 @@ public class AdminActivity extends AppCompatActivity {
         toLogBaleIntent.putExtra("username", currentUser);
         startActivity(toLogBaleIntent);
     }
+
+    public void toEditScheduleMenuClick(View view) {
+        Intent toEditScheduleIntent = new Intent(this, EditSchedulesActivity.class);
+        startActivity(toEditScheduleIntent);
+    }
 }
