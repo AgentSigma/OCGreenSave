@@ -15,6 +15,10 @@ public class ViewAllBalesActivity extends AppCompatActivity {
     //TODO: make a listview adapter
     private BaleListAdapter mBaleListAdapter;
 
+    /**
+     * Creates the ViewAllBalesActivity for admins
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

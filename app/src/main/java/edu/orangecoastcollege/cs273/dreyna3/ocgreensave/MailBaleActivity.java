@@ -20,6 +20,10 @@ public class MailBaleActivity extends AppCompatActivity {
     private String email;
     private String csvWriter;
 
+    /**
+     * Creates the MailBaleActivity
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +39,10 @@ emailEditText=(EditText) findViewById(R.id.emailEditText);
     }
 
 
-
+    /**
+     * Sends user to the email app, sending bale manifest
+     * @param view
+     */
     public void SendEmail(View view) {
         if(!emailEditText.equals("")) {
             csvWriter = "";

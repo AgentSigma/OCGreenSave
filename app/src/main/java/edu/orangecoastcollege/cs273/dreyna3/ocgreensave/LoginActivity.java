@@ -13,12 +13,17 @@ import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
+    // ADMIN KEY FOR OC RECYCLE CENTER MANGERS
     private static final int ADMIN_KEY = 1234;
     private EditText mUsernameEditText;
     private EditText mKeyEditText;
     private Animation mShakeAnim;
     private RelativeLayout mRelativeLayout;
 
+    /**
+     * Creates the LoginACtivity
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +38,12 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Signs in the user given the texts from the edit texts
+     * Checks to see if valid, and verifies against database
+     * Also checks for admin key
+     * @param view
+     */
     public void signInClick(View view) {
 
         // if both fields empty

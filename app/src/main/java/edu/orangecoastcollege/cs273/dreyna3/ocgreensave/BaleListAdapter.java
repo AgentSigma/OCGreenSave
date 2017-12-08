@@ -26,6 +26,12 @@ public class BaleListAdapter extends ArrayAdapter<Bale> {
     private Context mContext;
     private int mId;
 
+    /**
+     * Constructs a BaleListAdapter
+     * @param context activity's context
+     * @param resource res id of the layout to inflate
+     * @param bales list of bales to populate the item
+     */
     public BaleListAdapter(@NonNull Context context, int resource, @NonNull List<Bale> bales) {
         super(context, resource, bales);
         mContext = context;
@@ -33,6 +39,13 @@ public class BaleListAdapter extends ArrayAdapter<Bale> {
         mBales = bales;
     }
 
+    /**
+     * Inflates the item properly and sets its views
+     * @param position index of the list item
+     * @param convertView
+     * @param parent
+     * @return the list item
+     */
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {

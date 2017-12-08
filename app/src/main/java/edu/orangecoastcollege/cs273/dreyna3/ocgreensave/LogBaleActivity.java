@@ -23,6 +23,10 @@ public class LogBaleActivity extends AppCompatActivity implements AdapterView.On
     private String currentUser;
     private Date currentTime;
 
+    /**
+     * Creates the LogBaleActivity
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,17 +53,32 @@ public class LogBaleActivity extends AppCompatActivity implements AdapterView.On
         mBale.setUser(currentUser);
     }
 
+    /**
+     * If an item from the spinner is selected, bale type is set
+     * @param adapterView
+     * @param view
+     * @param i
+     * @param l
+     */
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         mBale.setType(adapterView.getItemAtPosition(i).toString());
     }
 
+    /**
+     * if nothing is selected, default is set
+     * @param adapterView
+     */
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
         mBale.setType("PET #1");
         mTypeSpinner.setSelection(0);
     }
 
+    /**
+     * Adds the log to the database given the edit text's texts
+     * @param view
+     */
     public void logSaveClick(View view) {
         mBale.setDate(currentTime.toString());
         mBale.setWeight(Double.parseDouble(mWeightEditText.getText().toString()));

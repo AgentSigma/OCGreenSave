@@ -17,6 +17,10 @@ public class ViewAllSchedulesActivity extends AppCompatActivity {
     private DBHelper mDb;
     private ScheduleListAdapter mScheduleListAdapter;
 
+    /**
+     * Creates the ViewAllSchedulesActivity
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,8 +35,7 @@ public class ViewAllSchedulesActivity extends AppCompatActivity {
     }
 
     /**
-     * This will send the user to the emailScheduleActivity
-     * Only happens in the ViewAllSchedulesActivity
+     * This will send the user to the EmailScheduleActivity
      * @param view the selected item
      */
     public void scheduleClicked(View view){

@@ -20,6 +20,10 @@ public class AddScheduleActivity extends AppCompatActivity {
     private EditText mSaturdayEditText;
     private EditText mSundayEditText;
 
+    /**
+     * Initializes the AddScheduleActivity
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +42,10 @@ public class AddScheduleActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Adds the schedule to the database
+     * @param view button that clicked
+     */
     public void addScheduleClick(View view) {
         Employee employee = new Employee(
                 mNameEditText.getText().toString(),
@@ -56,6 +64,9 @@ public class AddScheduleActivity extends AppCompatActivity {
         Toast.makeText(this, R.string.added_schedule_text, Toast.LENGTH_SHORT).show();
     }
 
+    /**
+     * Resets all the edit texts to empty
+     */
     private void resetEditTexts() {
         mNameEditText.setText("");
         mWeekDateEditText.setText("");

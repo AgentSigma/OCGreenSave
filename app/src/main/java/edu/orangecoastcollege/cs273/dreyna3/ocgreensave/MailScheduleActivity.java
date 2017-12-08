@@ -20,6 +20,10 @@ public class MailScheduleActivity extends AppCompatActivity {
     private String csvWriter;
     private Employee mEmployee;
 
+    /**
+     * Creates the MailScheduleActivity
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +38,10 @@ public class MailScheduleActivity extends AppCompatActivity {
     }
 
 
+    /**
+     * Sends user to the email app, with their schedule populating the body
+     * @param view
+     */
     public void emailScheduleClick(View view) {
         if (!emailEditText.equals("")) {
             csvWriter = "";

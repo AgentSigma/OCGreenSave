@@ -20,6 +20,10 @@ public class AdminActivity extends AppCompatActivity implements GestureDetector.
     private DBHelper mDb;
     private boolean hasSeenWarning;
 
+    /**
+     * Initializes the Admin Activity
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,26 +39,46 @@ public class AdminActivity extends AppCompatActivity implements GestureDetector.
         mGestureDetector.setOnDoubleTapListener(this);
     }
 
+    /**
+     * Finishes the current activity
+     * @param view button that clicked
+     */
     public void adminLogOutClick(View view) {
         finish();
     }
 
+    /**
+     * Starts the LogBaleActivity
+     * @param view button that clicked
+     */
     public void adminLogBaleClick(View view) {
         Intent toLogBaleIntent = new Intent(this, LogBaleActivity.class);
         toLogBaleIntent.putExtra("username", currentUser);
         startActivity(toLogBaleIntent);
     }
 
+    /**
+     * Starts the EditSchedule Menu Activity
+     * @param view button that clicked
+     */
     public void toEditScheduleMenuClick(View view) {
         Intent toEditScheduleIntent = new Intent(this, EditSchedulesActivity.class);
         startActivity(toEditScheduleIntent);
     }
 
+    /**
+     * Starts the MailBaleActivity
+     * @param view button that clicked
+     */
     public void mailBaleHistory(View view) {
         Intent toMailBaleIntent = new Intent(this, MailBaleActivity.class);
         startActivity(toMailBaleIntent);
     }
 
+    /**
+     * Starts the ViewAllBalesActivity
+     * @param view button that clicked
+     */
     public void toViewAllBalesClick(View view) {
         Intent viewAllBalesIntent = new Intent(this, ViewAllBalesActivity.class);
         startActivity(viewAllBalesIntent);

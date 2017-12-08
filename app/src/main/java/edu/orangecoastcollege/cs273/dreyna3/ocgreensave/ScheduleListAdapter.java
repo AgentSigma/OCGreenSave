@@ -34,6 +34,12 @@ public class ScheduleListAdapter extends ArrayAdapter<Employee>{
     private TextView mSaturday;
     private TextView mSunday;
 
+    /**
+     * Constructs a ScheduleListAdapter
+     * @param context current activity context
+     * @param resource res id of the layout to inflate
+     * @param objects list of employee objects
+     */
     public ScheduleListAdapter(@NonNull Context context, int resource, @NonNull List<Employee> objects) {
         super(context, resource, objects);
         mContext = context;
@@ -41,6 +47,13 @@ public class ScheduleListAdapter extends ArrayAdapter<Employee>{
         mEmployees = objects;
     }
 
+    /**
+     * Properly inflates the list item with info on the associated employee
+     * @param position index of the list item
+     * @param convertView
+     * @param parent
+     * @return the list item view
+     */
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {

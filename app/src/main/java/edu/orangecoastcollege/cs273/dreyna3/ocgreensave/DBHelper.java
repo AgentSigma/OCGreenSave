@@ -40,10 +40,18 @@ public class DBHelper extends SQLiteOpenHelper {
     private static final String FIELD_SATURDAY = "saturday";
     private static final String FIELD_SUNDAY = "sunday";
 
+    /**
+     * Constructs a database helper
+     * @param context context of the activity
+     */
     public DBHelper(Context context){
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
+    /**
+     * Creates the database
+     * @param sqLiteDatabase the SQLiteDatabase
+     */
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         // Bale Table creation
@@ -70,6 +78,12 @@ public class DBHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL(table);
     }
 
+    /**
+     * Upgrades the tables
+     * @param sqLiteDatabase the SQLiteDatabase
+     * @param i
+     * @param i1
+     */
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + BALE_TABLE);
@@ -80,17 +94,27 @@ public class DBHelper extends SQLiteOpenHelper {
 
     ////////////DB FUNCTIONS////////////
 
+    /**
+     * Clears the databases for debug purposes
+     */
     public void clearDatabases(){
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(BALE_TABLE, null, null);
         db.delete(EMPLOYEE_TABLE, null, null);
     }
 
+    /**
+     * Delete's the bale table
+     */
     public void deleteBaleHistory(){
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(BALE_TABLE, null, null);
     }
 
+    /**
+     * Adds a bale to the database
+     * @param bale bale to add
+     */
     public void addBale(Bale bale){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -104,6 +128,10 @@ public class DBHelper extends SQLiteOpenHelper {
         db.close();;
     }
 
+    /**
+     * Adds an employee to the datbase
+     * @param employee employee to add
+     */
     public void addEmployee(Employee employee) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -122,6 +150,10 @@ public class DBHelper extends SQLiteOpenHelper {
         db.close();
     }
 
+    /**
+     * Deletes a given employee
+     * @param employee employee to delete
+     */
     public void deleteEmployee(Employee employee){
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(EMPLOYEE_TABLE, EMPLOYEE_KEY_FIELD_ID + " = ?",
@@ -129,6 +161,10 @@ public class DBHelper extends SQLiteOpenHelper {
         db.close();
     }
 
+    /**
+     * Updates a given employee in the database
+     * @param employee employee to update
+     */
     public void updateEmployee(Employee employee){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -148,6 +184,10 @@ public class DBHelper extends SQLiteOpenHelper {
         db.close();
     }
 
+    /**
+     * Returns the bale table in the database
+     * @return an arraylist of bales
+     */
     public List<Bale> getAllBales(){
         List<Bale> balesList = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
@@ -180,6 +220,10 @@ public class DBHelper extends SQLiteOpenHelper {
         return balesList;
     }
 
+    /**
+     * Returns the employee table in the database
+     * @return arraylist of employees
+     */
     public List<Employee> getAllEmployees(){
         List<Employee> employeeList = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();

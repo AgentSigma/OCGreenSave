@@ -30,6 +30,10 @@ public class EditEmployeeScheduleActivity extends AppCompatActivity {
     private ScheduleListAdapter mScheduleListAdapter;
     private List<Employee> mEmployeeList;
 
+    /**
+     * Creates the EditEmployeeScheduleActivity
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +61,10 @@ public class EditEmployeeScheduleActivity extends AppCompatActivity {
         mWeekDateEditText.setText(mEmployee.getWeekDate());
     }
 
+    /**
+     * Takes the editTexts texts and sets them to the employee to update in the database
+     * @param view button that clicked
+     */
     public void editScheduleClick(View view) {
                 mEmployee.setName(mNameEditText.getText().toString());
                 mEmployee.setWeekDate(mWeekDateEditText.getText().toString());

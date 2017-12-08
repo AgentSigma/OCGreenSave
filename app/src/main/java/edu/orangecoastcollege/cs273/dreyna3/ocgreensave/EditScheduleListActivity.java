@@ -16,6 +16,10 @@ public class EditScheduleListActivity extends AppCompatActivity {
     private DBHelper mDb;
     private ScheduleListAdapter mScheduleListAdapter;
 
+    /**
+     * Creates the EditScheduleListActivity
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +35,6 @@ public class EditScheduleListActivity extends AppCompatActivity {
 
     /**
      * This will start a new activity to edit the selected employee schedule
-     * Only happens in the EditScheduleListActivity
      * @param view the selected item
      */
     public void scheduleClicked(View view){

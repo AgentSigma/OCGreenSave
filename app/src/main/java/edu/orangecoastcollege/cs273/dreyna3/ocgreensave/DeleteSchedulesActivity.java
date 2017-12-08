@@ -1,6 +1,5 @@
 package edu.orangecoastcollege.cs273.dreyna3.ocgreensave;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +15,10 @@ public class DeleteSchedulesActivity extends AppCompatActivity {
     private DBHelper mDb;
     private ScheduleListAdapter mScheduleListAdapter;
 
+    /**
+     * Creates the DeleteSchedulesActivity
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
