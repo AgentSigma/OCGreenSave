@@ -49,11 +49,10 @@ emailEditText=(EditText) findViewById(R.id.emailEditText);
             email = emailEditText.getText().toString();
 
             for (Bale bale : balesList) {
-                csvWriter += bale.getDate() + ", " +
-                        bale.getType() + ", " +
-                        bale.getUser() + ", " +
-                        bale.getWeight() + "\n";
-
+                csvWriter += bale.getUser() + " @["
+                        + bale.getDate() + "]"
+                        + "\nType: " + bale.getType() + " - "
+                        + bale.getWeight() + " lbs\n\n";
             }
 
             String filename = "BaleData.txt";

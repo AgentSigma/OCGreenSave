@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -12,10 +13,11 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/lightGreen"
         android:layout_marginTop="40dp"
         android:text="@string/login_string"
         android:textAlignment="center"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/black"
         android:textSize="50sp"
         android:layout_alignParentTop="true"/>
 
@@ -27,7 +29,7 @@
         android:layout_marginTop="20dp"
         android:text="@string/login_description"
         android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="20sp" />
 
     <EditText
@@ -58,4 +60,28 @@
         android:onClick="signInClick"
         android:id="@+id/signInButton"
         android:text="@string/login_buton_text" />
+
+    <ImageView
+        android:id="@+id/recycleLogoImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/recycle_logo"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:id="@+id/pirateImageView"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pirate"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/staffEditionTextView"
+        android:text="@string/staff_text"
+        android:layout_below="@id/pirateImageView"
+        android:layout_centerHorizontal="true"
+        android:textSize="40sp"
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="@color/colorPrimaryDark"/>
 </RelativeLayout>

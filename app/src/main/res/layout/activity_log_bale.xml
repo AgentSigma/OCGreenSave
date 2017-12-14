@@ -9,11 +9,13 @@
     tools:context="edu.orangecoastcollege.cs273.dreyna3.ocgreensave.LogBaleActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:text="@string/log_bale"
+        android:background="@color/lightGreen"
         android:textColor="@color/black"
         android:textSize="30sp"/>
 
@@ -98,7 +100,7 @@
             android:layout_marginEnd="15dp"
             android:layout_marginRight="15dp"
             android:layout_weight="1"
-            android:background="@color/colorPrimary"
+            android:background="@color/lightGreen"
             android:gravity="end"
             android:text="@string/log_bale_weight"
             android:textAlignment="textEnd"

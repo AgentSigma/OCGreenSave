@@ -60,5 +60,6 @@
     <string name="edit_schedule_buton_text">Save Changes To This Employee</string>
     <string name="editted_schedule_text">Editted schedule successfully!</string>
     <string name="deleted_bale_history_notification">Deleted bale history</string>
+    <string name="staff_text">Staff Edition</string>
 
 </resources>

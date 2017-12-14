@@ -8,7 +8,9 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
@@ -19,6 +21,13 @@ public class LoginActivity extends AppCompatActivity {
     private EditText mKeyEditText;
     private Animation mShakeAnim;
     private RelativeLayout mRelativeLayout;
+    private Animation mFromLeftAnim;
+    private Animation mFromRightAnim;
+    private Animation mFromBottomAnim;
+    private Animation mFadeOutAnim;
+    private ImageView mRecycleLogo;
+    private ImageView mPirateImage;
+    private TextView mStaffTextView;
 
     /**
      * Creates the LoginACtivity
@@ -29,6 +38,38 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        mPirateImage = (ImageView) findViewById(R.id.pirateImageView);
+        mRecycleLogo = (ImageView) findViewById(R.id.recycleLogoImageView);
+        mStaffTextView = (TextView) findViewById(R.id.staffEditionTextView);
+
+        mFromLeftAnim = AnimationUtils.loadAnimation(this, R.anim.in_from_left);
+        mFromRightAnim = AnimationUtils.loadAnimation(this, R.anim.in_from_right);
+        mFadeOutAnim = AnimationUtils.loadAnimation(this, R.anim.fade_out_anim);
+        mFromBottomAnim = AnimationUtils.loadAnimation(this, R.anim.in_from_bottom);
+
+        mPirateImage.startAnimation(mFromRightAnim);
+        mRecycleLogo.startAnimation(mFromLeftAnim);
+        mStaffTextView.startAnimation(mFromBottomAnim);
+
+        mPirateImage.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mPirateImage.startAnimation(mFadeOutAnim);
+                mRecycleLogo.startAnimation(mFadeOutAnim);
+                mStaffTextView.startAnimation(mFadeOutAnim);
+            }
+        }, 1400);
+        mRecycleLogo.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mPirateImage.setVisibility(View.GONE);
+                mRecycleLogo.setVisibility(View.GONE);
+                mStaffTextView.setVisibility(View.GONE);
+            }
+        }, 2400);
+
+//        mShakeAnim = AnimationUtils.loadAnimation(this, R.anim.shake_anim);
+//        mRelativeLayout.startAnimation(mShakeAnim);
         DBHelper db = new DBHelper(this);
         //db.clearDatabases();
 
