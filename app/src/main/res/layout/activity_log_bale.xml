@@ -25,6 +25,7 @@
         android:layout_height="150dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
         android:src="@drawable/receipt_icon"/>
 
     <LinearLayout

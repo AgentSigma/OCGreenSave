@@ -38,6 +38,10 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        mUsernameEditText = (EditText) findViewById(R.id.signatureEditText);
+        mKeyEditText = (EditText) findViewById(R.id.keyEditText);
+        mRelativeLayout = (RelativeLayout) findViewById(R.id.signInLayout);
+
         mPirateImage = (ImageView) findViewById(R.id.pirateImageView);
         mRecycleLogo = (ImageView) findViewById(R.id.recycleLogoImageView);
         mStaffTextView = (TextView) findViewById(R.id.staffEditionTextView);
@@ -47,9 +51,12 @@ public class LoginActivity extends AppCompatActivity {
         mFadeOutAnim = AnimationUtils.loadAnimation(this, R.anim.fade_out_anim);
         mFromBottomAnim = AnimationUtils.loadAnimation(this, R.anim.in_from_bottom);
 
+        mUsernameEditText.setEnabled(false);
+        mKeyEditText.setEnabled(false);
         mPirateImage.startAnimation(mFromRightAnim);
         mRecycleLogo.startAnimation(mFromLeftAnim);
         mStaffTextView.startAnimation(mFromBottomAnim);
+
 
         mPirateImage.postDelayed(new Runnable() {
             @Override
@@ -65,6 +72,8 @@ public class LoginActivity extends AppCompatActivity {
                 mPirateImage.setVisibility(View.GONE);
                 mRecycleLogo.setVisibility(View.GONE);
                 mStaffTextView.setVisibility(View.GONE);
+                mKeyEditText.setEnabled(true);
+                mUsernameEditText.setEnabled(true);
             }
         }, 2400);
 
@@ -73,9 +82,7 @@ public class LoginActivity extends AppCompatActivity {
         DBHelper db = new DBHelper(this);
         //db.clearDatabases();
 
-        mUsernameEditText = (EditText) findViewById(R.id.signatureEditText);
-        mKeyEditText = (EditText) findViewById(R.id.keyEditText);
-        mRelativeLayout = (RelativeLayout) findViewById(R.id.signInLayout);
+
 
     }
 
