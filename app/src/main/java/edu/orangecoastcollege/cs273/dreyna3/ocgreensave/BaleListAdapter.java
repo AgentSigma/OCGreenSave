@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.List;
@@ -24,6 +25,7 @@ public class BaleListAdapter extends ArrayAdapter<Bale> {
     private TextView mWeightTextView;
     private List<Bale> mBales;
     private Context mContext;
+    private LinearLayout mLinearLayout;
     private int mId;
 
     /**
@@ -58,11 +60,14 @@ public class BaleListAdapter extends ArrayAdapter<Bale> {
         mDateTextView = view.findViewById(R.id.baleItemDate);
         mTypeTextView = view.findViewById(R.id.baleItemType);
         mWeightTextView = view.findViewById(R.id.baleItemWeight);
+        mLinearLayout = view.findViewById(R.id.baleItemLinearLayout);
 
         mNameTextView.setText(bale.getUser());
         mDateTextView.setText(bale.getDate());
         mTypeTextView.setText(bale.getType());
         mWeightTextView.setText(String.valueOf(bale.getWeight()));
+
+        mLinearLayout.setTag(bale);
 
         return view;
     }

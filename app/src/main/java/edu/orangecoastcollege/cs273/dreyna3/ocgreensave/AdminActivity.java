@@ -105,6 +105,7 @@ public class AdminActivity extends AppCompatActivity implements GestureDetector.
         else {
             Toast.makeText(this, R.string.deleted_bale_history_notification, Toast.LENGTH_SHORT).show();
             mDb.deleteBaleHistory();
+            mDb.incrementBatch();
             hasSeenWarning = false;
         }
         return true;

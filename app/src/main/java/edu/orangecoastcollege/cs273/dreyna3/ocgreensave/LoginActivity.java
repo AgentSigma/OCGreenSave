@@ -27,6 +27,7 @@ public class LoginActivity extends AppCompatActivity {
     private Animation mFadeOutAnim;
     private ImageView mRecycleLogo;
     private ImageView mPirateImage;
+    private DBHelper mDb;
     private TextView mStaffTextView;
 
     /**
@@ -37,6 +38,10 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        mDb = new DBHelper(this);
+        if (mDb.getBatchNumber() == 0)
+            mDb.addBatchOneTimeCall();
 
         mUsernameEditText = (EditText) findViewById(R.id.signatureEditText);
         mKeyEditText = (EditText) findViewById(R.id.keyEditText);

@@ -19,7 +19,7 @@
             android:text="Employee Name"
             android:background="@color/colorPrimaryDark"
             android:textSize="26sp"
-            android:textColor="@color/lightGreen"
+            android:textColor="@color/colorAccent"
             android:id="@+id/scheduleItemName"
             />
         <TextView
@@ -42,7 +42,7 @@
         >
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="20sp"
@@ -51,7 +51,7 @@
             android:text="Monday Hours"
             android:id="@+id/scheduleItemMondayHours"/>
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="20sp"
@@ -60,7 +60,7 @@
             android:background="@color/lightGreen"
             android:id="@+id/scheduleItemTuesdayHours"/>
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="20sp"
@@ -69,7 +69,7 @@
             android:text="Wednesday Hours"
             android:id="@+id/scheduleItemWednesdayHours"/>
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="20sp"
@@ -78,7 +78,7 @@
             android:text="Thursday Hours"
             android:id="@+id/scheduleItemThursdayHours"/>
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="20sp"
@@ -87,7 +87,7 @@
             android:background="@color/colorPrimary"
             android:id="@+id/scheduleItemFridayHours"/>
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="20sp"
@@ -96,7 +96,7 @@
             android:background="@color/lightGreen"
             android:id="@+id/scheduleItemSaturdayHours"/>
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="20sp"

@@ -16,7 +16,7 @@ import java.util.List;
 public class DBHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "OCGsStaff";
-    private static final int DATABASE_VERSION = 3;
+    private static final int DATABASE_VERSION = 4;
 
     // For Bale Tracking
     private static final String BALE_TABLE = "BaleHistory";
@@ -39,6 +39,11 @@ public class DBHelper extends SQLiteOpenHelper {
     private static final String FIELD_FRIDAY = "friday";
     private static final String FIELD_SATURDAY = "saturday";
     private static final String FIELD_SUNDAY = "sunday";
+
+    // For Batch Number Tracking
+    private static final String BATCH_NUMBER_TABLE = "BatchNumber";
+    private static final String BATCH_KEY_FIELD_ID = "_id";
+    private static final String FIELD_BATCHNUMBER = "number";
 
     /**
      * Constructs a database helper
@@ -76,6 +81,11 @@ public class DBHelper extends SQLiteOpenHelper {
                 + FIELD_SATURDAY + " TEXT, "
                 + FIELD_SUNDAY + " TEXT)";
         sqLiteDatabase.execSQL(table);
+
+        table = "CREATE TABLE " + BATCH_NUMBER_TABLE + " ("
+                + BATCH_KEY_FIELD_ID + " INTEGER PRIMARY KEY, "
+                + FIELD_BATCHNUMBER + " INTEGER)";
+        sqLiteDatabase.execSQL(table);
     }
 
     /**
@@ -88,9 +98,52 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + BALE_TABLE);
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + EMPLOYEE_TABLE);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + BATCH_NUMBER_TABLE);
         onCreate(sqLiteDatabase);
     }
 
+    public void addBatchOneTimeCall(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues v = new ContentValues();
+        v.put(FIELD_BATCHNUMBER, 1);
+        db.insert(BATCH_NUMBER_TABLE, null, v);
+        db.close();
+    }
+    public void incrementBatch(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        int batchNum = 0;
+        Cursor c = db.query(
+                BATCH_NUMBER_TABLE,
+                new String[]{
+                        FIELD_BATCHNUMBER
+                }, null, null, null, null, null
+        );
+
+        if (c.moveToFirst())
+            batchNum = c.getInt(0);
+        ContentValues values = new ContentValues();
+        values.put(FIELD_BATCHNUMBER, batchNum + 1);
+        db.update(BATCH_NUMBER_TABLE, values, BATCH_KEY_FIELD_ID + " = ?",
+                new String[]{String.valueOf(batchNum)});
+        db.close();
+    }
+    public int getBatchNumber(){
+        SQLiteDatabase db = this.getReadableDatabase();
+        int batchNum = 0;
+        Cursor c = db.query(
+                BATCH_NUMBER_TABLE,
+                new String[]{
+                        FIELD_BATCHNUMBER
+                }, null, null, null, null, null
+        );
+
+        if (c.moveToFirst())
+            batchNum = c.getInt(0);
+
+        db.close();
+        c.close();
+        return batchNum;
+    }
 
     ////////////DB FUNCTIONS////////////
 
@@ -101,6 +154,7 @@ public class DBHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(BALE_TABLE, null, null);
         db.delete(EMPLOYEE_TABLE, null, null);
+        db.delete(BATCH_NUMBER_TABLE, null, null);
     }
 
     /**
@@ -265,5 +319,26 @@ public class DBHelper extends SQLiteOpenHelper {
         c.close();
         db.close();
         return employeeList;
+    }
+
+    public void updateBale(Bale bale) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+
+        values.put(FIELD_BALEUSERNAME, bale.getUser());
+        values.put(FIELD_DATE, bale.getDate());
+        values.put(FIELD_BALETYPE, bale.getType());
+        values.put(FIELD_BALEWEIGHT, bale.getWeight());
+
+        db.update(BALE_TABLE, values, BALE_KEY_FIELD_ID + " = ?",
+                new String[]{String.valueOf(bale.getId())});
+        db.close();
+    }
+
+    public void deleteBale(Bale bale) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(BALE_TABLE, BALE_KEY_FIELD_ID + " = ?",
+                new String[]{String.valueOf(bale.getId())});
+        db.close();
     }
 }

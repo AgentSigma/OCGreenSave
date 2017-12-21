@@ -14,26 +14,28 @@ import static android.R.attr.path;
 public class MailBaleActivity extends AppCompatActivity {
 
     private DBHelper db;
-    private List<Bale> balesList= new ArrayList<>();
+    private List<Bale> balesList = new ArrayList<>();
     private EditText emailEditText;
     private EditText subjectEditText;
     private String email;
     private String csvWriter;
+    private int batchNum;
 
     /**
      * Creates the MailBaleActivity
+     *
      * @param savedInstanceState
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mail_bale);
-emailEditText=(EditText) findViewById(R.id.emailEditText);
-        subjectEditText=(EditText) findViewById(R.id.subjectEditText);
+        emailEditText = (EditText) findViewById(R.id.emailEditText);
+        subjectEditText = (EditText) findViewById(R.id.subjectEditText);
 
         db = new DBHelper(this);
-        balesList=db.getAllBales();
-       csvWriter="";
+        balesList = db.getAllBales();
+        csvWriter = "";
 
 
     }
@@ -41,41 +43,44 @@ emailEditText=(EditText) findViewById(R.id.emailEditText);
 
     /**
      * Sends user to the email app, sending bale manifest
+     *
      * @param view
      */
     public void SendEmail(View view) {
-        if(!emailEditText.equals("")) {
+        if (!emailEditText.equals("")) {
             csvWriter = "";
             email = emailEditText.getText().toString();
 
+            csvWriter += "Batch #" + db.getBatchNumber() + "\n\n";
+
             for (Bale bale : balesList) {
-                csvWriter += bale.getUser() + " @["
-                        + bale.getDate() + "]"
-                        + "\nType: " + bale.getType() + " - "
-                        + bale.getWeight() + " lbs\n\n";
+                csvWriter += bale.getDate() + ", "
+                        + bale.getType() + ", "
+                        + bale.getWeight() + ", "
+                        + bale.getUser();
             }
 
             String filename = "BaleData.txt";
-          //  File filelocation = new File(Environment.getExternalStorageDirectory().getAbsolutePath(), filename);
+            //  File filelocation = new File(Environment.getExternalStorageDirectory().getAbsolutePath(), filename);
             //emailEditText.setText(filelocation.toString());
-           // Uri path = Uri.fromFile(filelocation);
-           // if (path.equals(null)) {
+            // Uri path = Uri.fromFile(filelocation);
+            // if (path.equals(null)) {
 
-           // } else {
-                Intent emailIntent = new Intent(Intent.ACTION_SEND);
+            // } else {
+            Intent emailIntent = new Intent(Intent.ACTION_SEND);
 // set the type to 'email'
-                emailIntent.setType("vnd.android.cursor.dir/email");
-                String to[] = {email};
-                emailIntent.putExtra(Intent.EXTRA_EMAIL, to);
+            emailIntent.setType("vnd.android.cursor.dir/email");
+            String to[] = {email};
+            emailIntent.putExtra(Intent.EXTRA_EMAIL, to);
 // the attachment
-                emailIntent.putExtra(Intent.EXTRA_STREAM, path);
+            emailIntent.putExtra(Intent.EXTRA_STREAM, path);
 // the mail subject
-                emailIntent.putExtra(Intent.EXTRA_SUBJECT, subjectEditText.getText().toString());
-                emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, csvWriter);
-                startActivity(Intent.createChooser(emailIntent, "Send email..."));
-            }
+            emailIntent.putExtra(Intent.EXTRA_SUBJECT, subjectEditText.getText().toString());
+            emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, csvWriter);
+            startActivity(Intent.createChooser(emailIntent, "Send email..."));
         }
-
-
     }
+
+
+}
 

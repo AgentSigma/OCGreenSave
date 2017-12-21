@@ -1,11 +1,14 @@
 package edu.orangecoastcollege.cs273.dreyna3.ocgreensave;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * Created by Daniel on 12/1/2017.
  * Bale Object
  */
 
-public class Bale {
+public class Bale implements Parcelable {
     private int id;
     private String user;
     private String date;
@@ -32,6 +35,26 @@ public class Bale {
      * Constructs an empty Bale object
      */
     public Bale() {}
+
+    protected Bale(Parcel in) {
+        id = in.readInt();
+        user = in.readString();
+        date = in.readString();
+        type = in.readString();
+        weight = in.readDouble();
+    }
+
+    public static final Creator<Bale> CREATOR = new Creator<Bale>() {
+        @Override
+        public Bale createFromParcel(Parcel in) {
+            return new Bale(in);
+        }
+
+        @Override
+        public Bale[] newArray(int size) {
+            return new Bale[size];
+        }
+    };
 
     /**
      * Returns the bale id
@@ -117,5 +140,19 @@ public class Bale {
                 ", date='" + date + '\'' +
                 ", weight=" + weight +
                 '}';
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeInt(id);
+        parcel.writeString(user);
+        parcel.writeString(date);
+        parcel.writeString(type);
+        parcel.writeDouble(weight);
     }
 }

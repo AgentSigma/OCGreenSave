@@ -46,7 +46,7 @@ public class LogBaleActivity extends AppCompatActivity implements AdapterView.On
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mTypeSpinner.setAdapter(adapter);
 
-        mDateEditText.setText(currentTime.toString());
+        mDateEditText.setText(currentTime.toString().replace("PST", ""));
 
         Intent fromMenuIntent = getIntent();
         currentUser = fromMenuIntent.getStringExtra("username");
@@ -71,7 +71,7 @@ public class LogBaleActivity extends AppCompatActivity implements AdapterView.On
      */
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
-        mBale.setType("PET #1");
+        mBale.setType("Aluminum/Cans");
         mTypeSpinner.setSelection(0);
     }
 
@@ -84,7 +84,7 @@ public class LogBaleActivity extends AppCompatActivity implements AdapterView.On
         mBale.setWeight(Double.parseDouble(mWeightEditText.getText().toString()));
         mBale.setType(mTypeSpinner.getSelectedItem().toString());
         db.addBale(mBale);
-        Toast.makeText(this, "Bale added: " + mBale.toString(), Toast.LENGTH_LONG).show();
+        Toast.makeText(this, R.string.bale_added_text, Toast.LENGTH_SHORT).show();
         finish();
     }
 }

@@ -17,7 +17,7 @@
         android:text="@string/BaleHistoryText"
         android:textColor="@color/black"
         android:background="@color/lightGreen"
-        android:textSize="50sp" />
+        android:textSize="30sp" />
 
     <ListView
         android:id="@+id/viewAllBalesListView"

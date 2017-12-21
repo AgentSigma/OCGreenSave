@@ -38,6 +38,8 @@
         </activity>
         <activity android:name=".MailBaleActivity">
         </activity>
+        <activity android:name=".EditDeleteBaleActivity">
+        </activity>
     </application>
 
 </manifest>

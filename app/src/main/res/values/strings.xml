@@ -16,7 +16,7 @@
     <string name="clear_bale_history">Delete Bale History</string>
     <string name="mail_bale_history">Mail Bale History</string>
     <string name="log_out_button_text">Log Out</string>
-    <string name="view_bale_history">View Bale History</string>
+    <string name="view_bale_history">View/Edit Bale History</string>
     <string name="staff_menu_title">Staff Options</string>
     <string name="view_schedule">View Staff Schedule List</string>
     <string name="email_schedule">Email your schedule</string>
@@ -51,9 +51,9 @@
     <string name="enter_email">Enter Email (Recipient)</string>
     <string name="send_email">Send Email</string>
     <string name="send_email_body_note">Email body will be auto \nfilled with bale database</string>
-    <string name="BaleHistoryText">Bale Database</string>
+    <string name="BaleHistoryText">Bale Database\nTap To Edit a Bale</string>
     <string name="send_email_body_schedule_note">Body will auto populate with your\nschedule that you selected</string>
-    <string name="delete_bales_warning">This is a dangerous function. Double tap again if this is what you wish.</string>
+    <string name="delete_bales_warning">Are you sure you want to reset the bale database and start a new batch? Double tap to confirm.</string>
     <string name="delete_schedule_activity_title">Tap to Delete A Schedule</string>
     <string name="edit_schedule_list_title">Tap To Edit A Schedule</string>
     <string name="edit_employee_schedule_title">Edit Schedule</string>
@@ -61,5 +61,11 @@
     <string name="editted_schedule_text">Editted schedule successfully!</string>
     <string name="deleted_bale_history_notification">Deleted bale history</string>
     <string name="staff_text">Staff Edition</string>
+    <string name="view_edit_bales_text">Edit Or Delete Bale</string>
+    <string name="edit_bale_button_text">Save Changes</string>
+    <string name="edit_delete_bale_button_delete">Delete Bale</string>
+    <string name="changes_saved_text">Bale changes have been saved</string>
+    <string name="deleted_bale_text">Bale has been deleted</string>
+    <string name="bale_added_text">Bale has been added.</string>
 
 </resources>
