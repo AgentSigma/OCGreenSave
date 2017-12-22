@@ -16,7 +16,7 @@ import java.util.List;
 public class DBHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "OCGsStaff";
-    private static final int DATABASE_VERSION = 4;
+    private static final int DATABASE_VERSION = 5;
 
     // For Bale Tracking
     private static final String BALE_TABLE = "BaleHistory";
@@ -120,7 +120,7 @@ public class DBHelper extends SQLiteOpenHelper {
         );
 
         if (c.moveToFirst())
-            batchNum = c.getInt(0);
+            batchNum = c.getInt(1);
         ContentValues values = new ContentValues();
         values.put(FIELD_BATCHNUMBER, batchNum + 1);
         db.update(BATCH_NUMBER_TABLE, values, BATCH_KEY_FIELD_ID + " = ?",
@@ -138,7 +138,7 @@ public class DBHelper extends SQLiteOpenHelper {
         );
 
         if (c.moveToFirst())
-            batchNum = c.getInt(0);
+            batchNum = c.getInt(1);
 
         db.close();
         c.close();
