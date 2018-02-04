@@ -15,7 +15,6 @@ public class ViewAllBalesActivity extends AppCompatActivity {
     private DBHelper db;
     private List<Bale> allBalesList = new ArrayList<>();
     private ListView balesListView;
-    //TODO: make a listview adapter
     private BaleListAdapter mBaleListAdapter;
 
     /**

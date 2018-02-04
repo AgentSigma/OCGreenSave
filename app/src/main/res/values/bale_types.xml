@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="bale_types">
+    <string-array name="bale_types"
+                  translatable="false">
         <item>Aluminum/Cans</item>
         <item>PET #1</item>
         <item>Cardboard</item>

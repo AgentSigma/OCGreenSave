@@ -60,12 +60,12 @@
     <string name="edit_schedule_buton_text">Save Changes To This Employee</string>
     <string name="editted_schedule_text">Editted schedule successfully!</string>
     <string name="deleted_bale_history_notification">Deleted bale history</string>
-    <string name="staff_text">Staff Edition</string>
-    <string name="view_edit_bales_text">Edit Or Delete Bale</string>
-    <string name="edit_bale_button_text">Save Changes</string>
-    <string name="edit_delete_bale_button_delete">Delete Bale</string>
-    <string name="changes_saved_text">Bale changes have been saved</string>
-    <string name="deleted_bale_text">Bale has been deleted</string>
-    <string name="bale_added_text">Bale has been added.</string>
+    <string name="staff_text" translatable="false">Staff Edition</string>
+    <string name="view_edit_bales_text" translatable="false">Edit Or Delete Bale</string>
+    <string name="edit_bale_button_text" translatable="false">Save Changes</string>
+    <string name="edit_delete_bale_button_delete" translatable="false">Delete Bale</string>
+    <string name="changes_saved_text" translatable="false">Bale changes have been saved</string>
+    <string name="deleted_bale_text" translatable="false">Bale has been deleted</string>
+    <string name="bale_added_text" translatable="false">Bale has been added.</string>
 
 </resources>

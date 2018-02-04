@@ -13,6 +13,30 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+// TODO LIST FOR APP 2.0
+// TODO 1-A: Logic Fix  - Logging bale with custom date logs current date instead of edit text date
+// TODO 1-B: Format     - Bale date should be MM/DD/YY Format, as requested
+
+// TODO 2:   Crash Fixes
+// TODO 2-A: Crash Fix  - Email bale list crashes app (may require some testing to find exact cause)
+// TODO 2-B: Crash Fix  - Logging empty bale crashes app (easy fix)
+
+// TODO 3:   Bales by Type
+// TODO 3-A: Format Fix - View bales in format [ Date | Type | Weight | Logger ]
+// TODO 3-B: Sorting    - View bales by type (via dropdown?) sorted by date
+// TODO 3-C: Email      - Email bales by type (via dropdown + button to confirm selection)
+// TODO 3-D: CSV        - Email/Save a CSV of the selected bale type history when clearing, (on tablet)
+// TODO 3-E: Deleting   - Delete bale history by type (via checkboxes)
+
+// TODO 4:   Staff Schedules
+// TODO 4-A: QoL Change - Editting a schedule doesn't autopopulate with previous data
+
+// TODO LIST FOR 2.1
+// TODO 5:   Schedule system requires a bit of an overhaul.
+
+
+
+
 public class LoginActivity extends AppCompatActivity {
 
     // ADMIN KEY FOR OC RECYCLE CENTER MANGERS

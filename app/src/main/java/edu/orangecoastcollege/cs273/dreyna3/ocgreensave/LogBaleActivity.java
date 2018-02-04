@@ -80,7 +80,7 @@ public class LogBaleActivity extends AppCompatActivity implements AdapterView.On
      * @param view
      */
     public void logSaveClick(View view) {
-        mBale.setDate(currentTime.toString());
+        mBale.setDate(mDateEditText.getText().toString());
         mBale.setWeight(Double.parseDouble(mWeightEditText.getText().toString()));
         mBale.setType(mTypeSpinner.getSelectedItem().toString());
         db.addBale(mBale);
