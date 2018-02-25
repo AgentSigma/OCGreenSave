@@ -9,34 +9,34 @@
     <string name="login_buton_text">Sign In</string>
     <string name="log_save_exit_text">Add Bale To Database</string>
     <string name="adminTextView">Admin Options</string>
-    <string name="editEmployees">Edit Schedules</string>
+    <string name="editEmployees">Manage Schedules</string>
     <string name="editScheduleButton">Edit Employee Schedule</string>
     <string name="logBaleButton">Log Bale</string>
     <string name="menu_activity_logout_button_text">Log Out</string>
     <string name="clear_bale_history">Delete Bale History</string>
-    <string name="mail_bale_history">Mail Bale History</string>
+    <string name="mail_bale_history">Mail Bale by Type</string>
     <string name="log_out_button_text">Log Out</string>
-    <string name="view_bale_history">View/Edit Bale History</string>
+    <string name="view_bale_history">Bale Database</string>
     <string name="staff_menu_title">Staff Options</string>
-    <string name="view_schedule">View Staff Schedule List</string>
+    <string name="view_schedule">View Work Schedules</string>
     <string name="email_schedule">Email your schedule</string>
     <string name="empty_login">Please enter a signature, or signature with admin key</string>
     <string name="incorrect_admin_key">Incorrect admin key.</string>
     <string name="log_bale_type">Bale Type</string>
-    <string name="log_bale_date">Date of This Bale</string>
+    <string name="log_bale_date">Date(mm/dd/yyyy)</string>
     <string name="log_bale_weight">Bale Weight</string>
     <string name="log_bale">Log a Bale</string>
-    <string name="edit_schedules_title">Edit Schedules</string>
+    <string name="edit_schedules_title">Manage Schedules</string>
     <string name="edit_schedule_view_all_schedules">View All Schedules</string>
     <string name="edit_schedules_edit_button_text">Edit Staff Schedules</string>
     <string name="edit_schedules_clear_button_text">Clear All Schedules</string>
-    <string name="edit_schedules_add_button_text">Add A Schedule</string>
-    <string name="edit_schedule_delete_button_text">Delete Schedule</string>
+    <string name="edit_schedules_add_button_text">Add Schedule(s)</string>
+    <string name="edit_schedule_delete_button_text">Delete Schedule(s)</string>
     <string name="edit_schedule_back_button">Back To Admin Menu</string>
     <string name="view_all_schedules_title">Viewing all Staff Schedules</string>
     <string name="add_schedule_title">Add Schedules</string>
     <string name="add_schedule_name_text">Employee Name</string>
-    <string name="add_schedule_weekdate_text">Week Starting Date - Ending Date</string>
+    <string name="add_schedule_weekdate_text">Week starting date (persists after an add)</string>
     <string name="hours_text">Hours</string>
     <string name="add_schedule_monday_text">Monday</string>
     <string name="add_schedule_tuesday_text">Tuesday</string>
@@ -47,12 +47,12 @@
     <string name="add_schedule_sunday_text">Sunday</string>
     <string name="add_schedule_buton_text">Add Employee Schedule</string>
     <string name="added_schedule_text">Added employee to the schedule list.</string>
-    <string name="subject_text">Subject</string>
-    <string name="enter_email">Enter Email (Recipient)</string>
-    <string name="send_email">Send Email</string>
-    <string name="send_email_body_note">Email body will be auto \nfilled with bale database</string>
+    <string name="subject_text">Subject/Title (optional)</string>
+    <string name="enter_email">Enter recipient email</string>
+    <string name="send_email">Generate Email</string>
+    <string name="send_email_body_note">Email body will be auto-filled\nwith the selected bale type</string>
     <string name="BaleHistoryText">Bale Database\nTap To Edit a Bale</string>
-    <string name="send_email_body_schedule_note">Body will auto populate with your\nschedule that you selected</string>
+    <string name="send_email_body_schedule_note">Body will auto populate with the\nschedule that you selected</string>
     <string name="delete_bales_warning">Are you sure you want to reset the bale database and start a new batch? Double tap to confirm.</string>
     <string name="delete_schedule_activity_title">Tap to Delete A Schedule</string>
     <string name="edit_schedule_list_title">Tap To Edit A Schedule</string>
@@ -60,12 +60,26 @@
     <string name="edit_schedule_buton_text">Save Changes To This Employee</string>
     <string name="editted_schedule_text">Editted schedule successfully!</string>
     <string name="deleted_bale_history_notification">Deleted bale history</string>
-    <string name="staff_text" translatable="false">Staff Edition</string>
-    <string name="view_edit_bales_text" translatable="false">Edit Or Delete Bale</string>
-    <string name="edit_bale_button_text" translatable="false">Save Changes</string>
-    <string name="edit_delete_bale_button_delete" translatable="false">Delete Bale</string>
-    <string name="changes_saved_text" translatable="false">Bale changes have been saved</string>
-    <string name="deleted_bale_text" translatable="false">Bale has been deleted</string>
-    <string name="bale_added_text" translatable="false">Bale has been added.</string>
+    <string name="staff_text">Staff Edition</string>
+    <string name="view_edit_bales_text">Edit Or Delete Bale</string>
+    <string name="edit_bale_button_text">Save Changes</string>
+    <string name="edit_delete_bale_button_delete">Delete Bale</string>
+    <string name="changes_saved_text">Bale changes have been saved</string>
+    <string name="deleted_bale_text">Bale has been deleted</string>
+    <string name="bale_added_text">Bale has been added.</string>
+    <string name="email_bale_type_ac">Aluminum/Cans</string>
+    <string name="email_bale_type_pet1" translatable="false">PET #1</string>
+    <string name="email_bale_type_cardboard">Cardboard</string>
+    <string name="email_bale_type_hdpe2" translatable="false">HDPE #2</string>
+    <string name="empty_fields">Please fill all fields indicated</string>
+    <string name="sort_text">Sort by Type</string>
+    <string name="email_bale_button_info">(Will send you to your default email app)</string>
+    <string name="edit_employee_schedule_previous_sched">Previous Schedule:</string>
+    <string name="add_schedule_warning_text">Ensure all fields are filled</string>
+    <string name="delete_bale_type_button_text">Save to device and delete from database</string>
+    <string name="bale_type_cleared">Data saved to OCGreenSave_Staff folder</string>
+    <string name="bale_type_selection_missing">Please ensure to select a type first!</string>
+    <string name="delete_bales_type_info">Hold to Delete</string>
+    <string name="date_format_warning">Date format MUST be as shown above</string>
 
 </resources>

@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -22,6 +23,7 @@ public class LogBaleActivity extends AppCompatActivity implements AdapterView.On
     private DBHelper db;
     private String currentUser;
     private Date currentTime;
+    private String formattedTime;
 
     /**
      * Creates the LogBaleActivity
@@ -35,6 +37,8 @@ public class LogBaleActivity extends AppCompatActivity implements AdapterView.On
         db = new DBHelper(this);
         mBale = new Bale();
         currentTime = Calendar.getInstance().getTime();
+        SimpleDateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+        formattedTime = df.format(currentTime);
 
         mTypeSpinner = (Spinner) findViewById(R.id.baleTypeSpinner);
         mDateEditText = (EditText) findViewById(R.id.baleDateEditText);
@@ -46,7 +50,7 @@ public class LogBaleActivity extends AppCompatActivity implements AdapterView.On
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mTypeSpinner.setAdapter(adapter);
 
-        mDateEditText.setText(currentTime.toString().replace("PST", ""));
+        mDateEditText.setText(formattedTime);
 
         Intent fromMenuIntent = getIntent();
         currentUser = fromMenuIntent.getStringExtra("username");
@@ -80,11 +84,19 @@ public class LogBaleActivity extends AppCompatActivity implements AdapterView.On
      * @param view
      */
     public void logSaveClick(View view) {
-        mBale.setDate(mDateEditText.getText().toString());
-        mBale.setWeight(Double.parseDouble(mWeightEditText.getText().toString()));
-        mBale.setType(mTypeSpinner.getSelectedItem().toString());
-        db.addBale(mBale);
-        Toast.makeText(this, R.string.bale_added_text, Toast.LENGTH_SHORT).show();
-        finish();
+        if (mDateEditText.getText().toString().equals("")
+                || mWeightEditText.getText().toString().equals("")) {
+            Toast.makeText(this, R.string.empty_fields, Toast.LENGTH_SHORT).show();
+            mWeightEditText.setError("");
+            mDateEditText.setError("");
+        }
+        else {
+            mBale.setDate(mDateEditText.getText().toString());
+            mBale.setWeight(Double.parseDouble(mWeightEditText.getText().toString()));
+            mBale.setType(mTypeSpinner.getSelectedItem().toString());
+            db.addBale(mBale);
+            Toast.makeText(this, R.string.bale_added_text, Toast.LENGTH_SHORT).show();
+            finish();
+        }
     }
 }

@@ -59,4 +59,23 @@
     <string name="edit_schedule_buton_text">Guardar cambios en este empleado</string>
     <string name="editted_schedule_text">Programa editado con éxito!</string>
     <string name="deleted_bale_history_notification">Borrado del historial de pacas</string>
+    <string name="delete_bales_type_info">Hold to Delete</string>
+    <string name="staff_text">Edición para el personal</string>
+    <string name="view_edit_bales_text">" Editar o eliminar"</string>
+    <string name="date_format_warning">Date format MUST be as shown above</string>
+    <string name="edit_bale_button_text">Guardar cambios</string>
+    <string name="edit_delete_bale_button_delete">Eliminar Bale</string>
+    <string name="changes_saved_text">" Cambios de Bale guardados"</string>
+    <string name="deleted_bale_text">La bala ha sido eliminada</string>
+    <string name="bale_added_text">" La bala ha sido añadida"</string>
+    <string name="email_bale_type_ac">Aluminio</string>
+    <string name="email_bale_type_cardboard">Cartulina</string>
+    <string name="empty_fields">" Por favor complete todos los campos indicados"</string>
+    <string name="sort_text">"Ordenar por tipo "</string>
+    <string name="email_bale_button_info">"(Te enviará a tu aplicación de correo electrónico predeterminada) "</string>
+    <string name="edit_employee_schedule_previous_sched">"Horario anterior: "</string>
+    <string name="add_schedule_warning_text">"Asegúrese de que todos los campos estén llenos "</string>
+    <string name="delete_bale_type_button_text">Guardar como archivo y eliminar de la base de datos</string>
+    <string name="bale_type_cleared">" Archivo guardado en el dispositivo y las pacas se han borrado"</string>
+    <string name="bale_type_selection_missing">"Por favor, asegúrese de seleccionar un tipo primero! "</string>
 </resources>

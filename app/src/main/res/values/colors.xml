@@ -6,4 +6,5 @@
     <color name="colorAccent">#ffad41</color>
     <color name="black">#000000</color>
     <color name="red">#cf0000</color>
+    <color name="white">#FFFF</color>
 </resources>

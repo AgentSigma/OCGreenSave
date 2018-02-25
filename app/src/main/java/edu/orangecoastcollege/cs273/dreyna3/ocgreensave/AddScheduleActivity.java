@@ -47,21 +47,35 @@ public class AddScheduleActivity extends AppCompatActivity {
      * @param view button that clicked
      */
     public void addScheduleClick(View view) {
-        Employee employee = new Employee(
-                mNameEditText.getText().toString(),
-                mWeekDateEditText.getText().toString(),
-                mMondayEditText.getText().toString(),
-                mTuesdayEditText.getText().toString(),
-                mWednesdayEditText.getText().toString(),
-                mThursdayEditText.getText().toString(),
-                mFridayEditText.getText().toString(),
-                mSaturdayEditText.getText().toString(),
-                mSundayEditText.getText().toString()
-        );
 
-        mDb.addEmployee(employee);
-        resetEditTexts();
-        Toast.makeText(this, R.string.added_schedule_text, Toast.LENGTH_SHORT).show();
+        if (mNameEditText.getText().toString().equals("")
+                || mWeekDateEditText.toString().equals("")
+                || mMondayEditText.toString().equals("")
+                || mTuesdayEditText.toString().equals("")
+                || mWednesdayEditText.toString().equals("")
+                || mThursdayEditText.toString().equals("")
+                || mFridayEditText.toString().equals("")
+                || mSaturdayEditText.toString().equals("")
+                || mSundayEditText.toString().equals("")){
+            Toast.makeText(this, R.string.add_schedule_warning_text, Toast.LENGTH_SHORT).show();
+        }
+        else {
+            Employee employee = new Employee(
+                    mNameEditText.getText().toString(),
+                    mWeekDateEditText.getText().toString(),
+                    mMondayEditText.getText().toString(),
+                    mTuesdayEditText.getText().toString(),
+                    mWednesdayEditText.getText().toString(),
+                    mThursdayEditText.getText().toString(),
+                    mFridayEditText.getText().toString(),
+                    mSaturdayEditText.getText().toString(),
+                    mSundayEditText.getText().toString()
+            );
+
+            mDb.addEmployee(employee);
+            resetEditTexts();
+            Toast.makeText(this, R.string.added_schedule_text, Toast.LENGTH_SHORT).show();
+        }
     }
 
     /**
@@ -69,7 +83,6 @@ public class AddScheduleActivity extends AppCompatActivity {
      */
     private void resetEditTexts() {
         mNameEditText.setText("");
-        mWeekDateEditText.setText("");
         mMondayEditText.setText("");
         mTuesdayEditText.setText("");
         mWednesdayEditText.setText("");

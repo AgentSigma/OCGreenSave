@@ -18,10 +18,81 @@
         android:textColor="@color/black"
         android:background="@color/lightGreen"
         android:textSize="30sp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="@string/sort_text"
+        android:textAlignment="center"/>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/email_bale_type_ac"
+            android:background="@color/lightGreen"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:id="@+id/viewBalesACRadioButton"
+            android:onClick="viewBalesFilterByType"/>
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/email_bale_type_pet1"
+            android:background="@color/lightGreen"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:id="@+id/viewBalesPET1RadioButton"
+            android:onClick="viewBalesFilterByType"/>
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/email_bale_type_cardboard"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@color/lightGreen"
+            android:id="@+id/viewBalesCardboardRadioButton"
+            android:onClick="viewBalesFilterByType"/>
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/email_bale_type_hdpe2"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@color/lightGreen"
+            android:id="@+id/viewBalesHDPE2RadioButton"
+            android:onClick="viewBalesFilterByType"/>
+    </RadioGroup>
 
     <ListView
         android:id="@+id/viewAllBalesListView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="0dp"
+        android:layout_weight="12"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:text="@string/delete_bales_type_info"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/delete_bale_type_button_text"
+        android:textColor="@color/red"
+        android:layout_weight="1"
+        android:id="@+id/viewBalesDeleteButton"/>
 
 </LinearLayout>

@@ -1,110 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scheduleItemLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:id="@+id/scheduleItemLayout"
-    android:onClick="scheduleClicked">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="2dp"
-        android:layout_marginTop="10dp">
+    android:onClick="scheduleClicked"
+    android:orientation="horizontal"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Employee Name"
-            android:background="@color/colorPrimaryDark"
-            android:textSize="26sp"
-            android:textColor="@color/colorAccent"
-            android:id="@+id/scheduleItemName"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Week Date"
-            android:textAlignment="center"
-            android:textSize="26sp"
-            android:textColor="@color/black"
-            android:background="@color/colorPrimary"
-            android:id="@+id/scheduleItemWeekDate"/>
-    </LinearLayout>
+    <TextView
+        android:id="@+id/scheduleItemName"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:background="@color/colorPrimaryDark"
+        android:text="Employee Name"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <TextView
+        android:id="@+id/scheduleItemWeekDate"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
         android:background="@color/lightGreen"
-        android:layout_marginBottom="10dp"
-        >
+        android:text="Week Date"
+        android:textColor="@color/black"
+        android:textSize="16sp"/>
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:background="@color/colorPrimary"
-            android:text="Monday Hours"
-            android:id="@+id/scheduleItemMondayHours"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:text="Tuesday Hours"
-            android:background="@color/lightGreen"
-            android:id="@+id/scheduleItemTuesdayHours"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:background="@color/colorPrimary"
-            android:text="Wednesday Hours"
-            android:id="@+id/scheduleItemWednesdayHours"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:background="@color/lightGreen"
-            android:text="Thursday Hours"
-            android:id="@+id/scheduleItemThursdayHours"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:text="Friday Hours"
-            android:background="@color/colorPrimary"
-            android:id="@+id/scheduleItemFridayHours"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:text="Saturday Hours"
-            android:background="@color/lightGreen"
-            android:id="@+id/scheduleItemSaturdayHours"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:text="Sunday Hours"
-            android:background="@color/colorPrimary"
-            android:id="@+id/scheduleItemSundayHours"/>
+    <TextView
+        android:id="@+id/scheduleItemSundayHours"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/colorPrimary"
+        android:text="Sun"
+        android:textColor="@color/black"
+        android:textSize="16sp"/>
 
-    </LinearLayout>
+    <TextView
+        android:id="@+id/scheduleItemMondayHours"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/lightGreen"
+        android:text="Mon"
+        android:textColor="@color/black"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/scheduleItemTuesdayHours"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/colorPrimary"
+        android:text="Tue"
+        android:textColor="@color/black"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/scheduleItemWednesdayHours"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/lightGreen"
+        android:text="Wed"
+        android:textColor="@color/black"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/scheduleItemThursdayHours"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/colorPrimary"
+        android:text="Thu"
+        android:textColor="@color/black"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/scheduleItemFridayHours"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/lightGreen"
+        android:text="Fri"
+        android:textColor="@color/black"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/scheduleItemSaturdayHours"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/colorPrimary"
+        android:text="Sat"
+        android:textColor="@color/black"
+        android:textSize="16sp"/>
 
 </LinearLayout>

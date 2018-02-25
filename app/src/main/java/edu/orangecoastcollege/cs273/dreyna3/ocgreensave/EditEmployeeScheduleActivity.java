@@ -59,6 +59,13 @@ public class EditEmployeeScheduleActivity extends AppCompatActivity {
 
         mNameEditText.setText(mEmployee.getName());
         mWeekDateEditText.setText(mEmployee.getWeekDate());
+        mMondayEditText.setText(mEmployee.getMondayHours());
+        mTuesdayEditText.setText(mEmployee.getTuesdayHours());
+        mWednesdayEditText.setText(mEmployee.getWednesdayHours());
+        mThursdayEditText.setText(mEmployee.getThursdayHours());
+        mFridayEditText.setText(mEmployee.getFridayHours());
+        mSaturdayEditText.setText(mEmployee.getSaturdayHours());
+        mSundayEditText.setText(mEmployee.getSundayHours());
     }
 
     /**
@@ -86,5 +93,5 @@ public class EditEmployeeScheduleActivity extends AppCompatActivity {
      * Does nothing in this activity
      * @param v n/a
      */
-    public void scheduleClick(View v){}
+    public void scheduleClicked(View v){}
 }

@@ -25,11 +25,41 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="Name"
+            android:background="@color/colorPrimaryDark"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:text="Week"
+            android:background="@color/lightGreen"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="20sp"
             android:textColor="@color/black"
+            android:text="Sun"
             android:background="@color/colorPrimary"
-            android:text="Monday Hours"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:background="@color/lightGreen"
+            android:text="Mon"
             />
         <TextView
             android:layout_width="0dp"
@@ -37,7 +67,34 @@
             android:layout_weight="1"
             android:textSize="20sp"
             android:textColor="@color/black"
-            android:text="Tuesday Hours"
+            android:text="Tue"
+            android:background="@color/colorPrimary"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:background="@color/lightGreen"
+            android:text="Wed"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:background="@color/colorPrimary"
+            android:text="Thu"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:text="Fri"
             android:background="@color/lightGreen"
             />
         <TextView
@@ -46,43 +103,7 @@
             android:layout_weight="1"
             android:textSize="20sp"
             android:textColor="@color/black"
-            android:background="@color/colorPrimary"
-            android:text="Wednesday Hours"
-            />
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:background="@color/lightGreen"
-            android:text="Thursday Hours"
-            />
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:text="Friday Hours"
-            android:background="@color/colorPrimary"
-            />
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:text="Saturday Hours"
-            android:background="@color/lightGreen"
-            />
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:text="Sunday Hours"
+            android:text="Sat"
             android:background="@color/colorPrimary"
             />
 
