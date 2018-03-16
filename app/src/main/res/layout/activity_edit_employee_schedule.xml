@@ -27,7 +27,8 @@
     <ListView
         android:id="@+id/editEmployeeScheduleListView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>//
 
     <EditText
         android:id="@+id/editScheduleNameEditText"
@@ -37,7 +38,8 @@
         android:hint="@string/add_schedule_name_text"
         android:inputType="textPersonName"
         android:textColor="@color/black"
-        android:textSize="26sp"/>
+        android:textSize="26sp"
+        android:nextFocusDown="@id/editScheduleWeekDateEditText"/>
     <requestFocus/>
 
     <EditText
@@ -48,7 +50,8 @@
         android:hint="@string/add_schedule_weekdate_text"
         android:inputType="text"
         android:textSize="26sp"
-        tools:ignore="TextFields"/>
+        tools:ignore="TextFields"
+        android:nextFocusDown="@id/editScheduleSundayEditText"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -72,7 +75,8 @@
             android:hint="@string/add_schedule_sunday_text"
             android:inputType="text"
             android:textAlignment="center"
-            android:textSize="26sp"/>
+            android:textSize="26sp"
+            android:nextFocusDown="@id/editScheduleMondayEditText"/>
 
         <TextView
             android:layout_width="0dp"
@@ -94,7 +98,8 @@
             android:hint="@string/add_schedule_monday_text"
             android:inputType="text"
             android:textAlignment="center"
-            android:textSize="26sp"/>
+            android:textSize="26sp"
+            android:nextFocusDown="@id/editScheduleTuesdayEditText"/>
 
         <EditText
             android:id="@+id/editScheduleThursdayEditText"
@@ -104,7 +109,8 @@
             android:hint="@string/add_schedule_thursday_text"
             android:inputType="text"
             android:textAlignment="center"
-            android:textSize="26sp"/>
+            android:textSize="26sp"
+            android:nextFocusDown="@id/editScheduleFridayEditText"/>
 
     </LinearLayout>
 
@@ -121,7 +127,8 @@
             android:hint="@string/add_schedule_tuesday_text"
             android:inputType="text"
             android:textAlignment="center"
-            android:textSize="26sp"/>
+            android:textSize="26sp"
+            android:nextFocusDown="@id/editScheduleWednesdayEditText"/>
 
         <EditText
             android:id="@+id/editScheduleFridayEditText"
@@ -131,7 +138,8 @@
             android:hint="@string/add_schedule_friday_text"
             android:inputType="text"
             android:textAlignment="center"
-            android:textSize="26sp"/>
+            android:textSize="26sp"
+            android:nextFocusDown="@id/editScheduleSaturdayEditText"/>
 
 
     </LinearLayout>
@@ -149,7 +157,8 @@
             android:hint="@string/add_schedule_wednesday_text"
             android:inputType="text"
             android:textAlignment="center"
-            android:textSize="26sp"/>
+            android:textSize="26sp"
+            android:nextFocusDown="@id/editScheduleThursdayEditText"/>
 
 
         <EditText

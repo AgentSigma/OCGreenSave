@@ -54,7 +54,7 @@
     <string name="BaleHistoryText">Bale Database\nTap To Edit a Bale</string>
     <string name="send_email_body_schedule_note">Body will auto populate with the\nschedule that you selected</string>
     <string name="delete_bales_warning">Are you sure you want to reset the bale database and start a new batch? Double tap to confirm.</string>
-    <string name="delete_schedule_activity_title">Tap to Delete A Schedule</string>
+    <string name="delete_schedule_activity_title">Tap and Hold to Delete A Schedule</string>
     <string name="edit_schedule_list_title">Tap To Edit A Schedule</string>
     <string name="edit_employee_schedule_title">Edit Schedule</string>
     <string name="edit_schedule_buton_text">Save Changes To This Employee</string>

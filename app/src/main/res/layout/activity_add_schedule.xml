@@ -62,7 +62,8 @@
             android:hint="@string/add_schedule_sunday_text"
             android:inputType="text"
             android:textAlignment="center"
-            android:textSize="30sp"/>
+            android:textSize="30sp"
+            android:nextFocusDown="@id/addScheduleMondayEditText"/>
 
         <TextView
             android:layout_width="0dp"
@@ -84,7 +85,8 @@
             android:hint="@string/add_schedule_monday_text"
             android:inputType="text"
             android:textAlignment="center"
-            android:textSize="30sp"/>
+            android:textSize="30sp"
+            android:nextFocusDown="@id/addScheduleTuesdayEditText"/>
 
         <EditText
             android:id="@+id/addScheduleThursdayEditText"
@@ -94,7 +96,8 @@
             android:hint="@string/add_schedule_thursday_text"
             android:inputType="text"
             android:textAlignment="center"
-            android:textSize="30sp"/>
+            android:textSize="30sp"
+            android:nextFocusDown="@id/addScheduleFridayEditText"/>
 
 
     </LinearLayout>
@@ -112,7 +115,8 @@
             android:hint="@string/add_schedule_tuesday_text"
             android:inputType="text"
             android:textAlignment="center"
-            android:textSize="30sp"/>
+            android:textSize="30sp"
+            android:nextFocusDown="@id/addScheduleWednesdayEditText"/>
 
         <EditText
             android:id="@+id/addScheduleFridayEditText"
@@ -122,7 +126,8 @@
             android:hint="@string/add_schedule_friday_text"
             android:inputType="text"
             android:textAlignment="center"
-            android:textSize="30sp"/>
+            android:textSize="30sp"
+            android:nextFocusDown="@id/addScheduleSaturdayEditText"/>
 
     </LinearLayout>
 
@@ -139,7 +144,8 @@
             android:hint="@string/add_schedule_wednesday_text"
             android:inputType="text"
             android:textAlignment="center"
-            android:textSize="30sp"/>
+            android:textSize="30sp"
+            android:nextFocusDown="@id/addScheduleThursdayEditText"/>
 
 
         <EditText

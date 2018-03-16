@@ -39,9 +39,17 @@ public class DeleteSchedulesActivity extends AppCompatActivity {
      */
     public void scheduleClicked(View view){
         LinearLayout selected = (LinearLayout) view;
-        Employee employee = (Employee) selected.getTag();
-        mDb.deleteEmployee(employee);
-        mScheduleList.remove(employee);
-        mScheduleListAdapter.notifyDataSetChanged();
+        selected.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                Employee employee = (Employee) view.getTag();
+
+                mDb.deleteEmployee(employee);
+                mScheduleList.remove(employee);
+                mScheduleListAdapter.notifyDataSetChanged();
+                return true;
+            }
+        });
+
     }
 }

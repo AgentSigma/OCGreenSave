@@ -83,7 +83,8 @@
             android:layout_weight="1"
             android:inputType="date"
             android:textColor="@color/black"
-            android:id="@+id/editDeleteBaleDate"/>
+            android:id="@+id/editDeleteBaleDate"
+            android:nextFocusDown="@id/editDeleteBaleWeight"/>
     </LinearLayout>
 
     <TextView

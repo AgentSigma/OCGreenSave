@@ -19,7 +19,8 @@
         android:hint="@string/enter_email"
         android:inputType="textEmailAddress"
         android:textColor="@color/black"
-        android:textSize="40sp"/> <requestFocus/>
+        android:textSize="40sp"
+        android:nextFocusDown="@id/emailScheduleSubjectEditText"/> <requestFocus/>
 
     <EditText
         android:id="@+id/emailScheduleSubjectEditText"
